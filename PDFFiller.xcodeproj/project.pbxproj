@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B1E71B716AAA79200219F7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71B616AAA79200219F7E /* UIKit.framework */; };
+		3B1E71B916AAA79200219F7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71B816AAA79200219F7E /* Foundation.framework */; };
+		3B1E71BB16AAA79200219F7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71BA16AAA79200219F7E /* CoreGraphics.framework */; };
+		3B1E71C116AAA79200219F7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E71BF16AAA79200219F7E /* InfoPlist.strings */; };
+		3B1E71C316AAA79200219F7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71C216AAA79200219F7E /* main.m */; };
+		3B1E71C716AAA79200219F7E /* KHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71C616AAA79200219F7E /* KHAppDelegate.m */; };
+		3B1E71C916AAA79200219F7E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E71C816AAA79200219F7E /* Default.png */; };
+		3B1E71CB16AAA79200219F7E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E71CA16AAA79200219F7E /* Default@2x.png */; };
+		3B1E71CD16AAA79200219F7E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E71CC16AAA79200219F7E /* Default-568h@2x.png */; };
+		3B1E71D516AAA79200219F7E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71D416AAA79200219F7E /* SenTestingKit.framework */; };
+		3B1E71D616AAA79200219F7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71B616AAA79200219F7E /* UIKit.framework */; };
+		3B1E71D716AAA79200219F7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71B816AAA79200219F7E /* Foundation.framework */; };
+		3B1E71DF16AAA79200219F7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E71DD16AAA79200219F7E /* InfoPlist.strings */; };
+		3B1E71E216AAA79200219F7E /* PDFFillerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71E116AAA79200219F7E /* PDFFillerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B1E71D816AAA79200219F7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B1E71AB16AAA79200219F7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1E71B216AAA79200219F7E;
+			remoteInfo = PDFFiller;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B1E71B316AAA79200219F7E /* PDFFiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFFiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1E71B616AAA79200219F7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B1E71B816AAA79200219F7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B1E71BA16AAA79200219F7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B1E71BE16AAA79200219F7E /* PDFFiller-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDFFiller-Info.plist"; sourceTree = "<group>"; };
+		3B1E71C016AAA79200219F7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B1E71C216AAA79200219F7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B1E71C416AAA79200219F7E /* PDFFiller-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFFiller-Prefix.pch"; sourceTree = "<group>"; };
+		3B1E71C516AAA79200219F7E /* KHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHAppDelegate.h; sourceTree = "<group>"; };
+		3B1E71C616AAA79200219F7E /* KHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHAppDelegate.m; sourceTree = "<group>"; };
+		3B1E71C816AAA79200219F7E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3B1E71CA16AAA79200219F7E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3B1E71CC16AAA79200219F7E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3B1E71D316AAA79200219F7E /* PDFFillerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDFFillerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1E71D416AAA79200219F7E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3B1E71DC16AAA79200219F7E /* PDFFillerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDFFillerTests-Info.plist"; sourceTree = "<group>"; };
+		3B1E71DE16AAA79200219F7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B1E71E016AAA79200219F7E /* PDFFillerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFFillerTests.h; sourceTree = "<group>"; };
+		3B1E71E116AAA79200219F7E /* PDFFillerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFFillerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B1E71B016AAA79200219F7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E71B716AAA79200219F7E /* UIKit.framework in Frameworks */,
+				3B1E71B916AAA79200219F7E /* Foundation.framework in Frameworks */,
+				3B1E71BB16AAA79200219F7E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1E71CF16AAA79200219F7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E71D516AAA79200219F7E /* SenTestingKit.framework in Frameworks */,
+				3B1E71D616AAA79200219F7E /* UIKit.framework in Frameworks */,
+				3B1E71D716AAA79200219F7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B1E71AA16AAA79200219F7E = {
+			isa = PBXGroup;
+			children = (
+				3B1E71BC16AAA79200219F7E /* PDFFiller */,
+				3B1E71DA16AAA79200219F7E /* PDFFillerTests */,
+				3B1E71B516AAA79200219F7E /* Frameworks */,
+				3B1E71B416AAA79200219F7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B1E71B416AAA79200219F7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E71B316AAA79200219F7E /* PDFFiller.app */,
+				3B1E71D316AAA79200219F7E /* PDFFillerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B1E71B516AAA79200219F7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E71B616AAA79200219F7E /* UIKit.framework */,
+				3B1E71B816AAA79200219F7E /* Foundation.framework */,
+				3B1E71BA16AAA79200219F7E /* CoreGraphics.framework */,
+				3B1E71D416AAA79200219F7E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B1E71BC16AAA79200219F7E /* PDFFiller */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E71C516AAA79200219F7E /* KHAppDelegate.h */,
+				3B1E71C616AAA79200219F7E /* KHAppDelegate.m */,
+				3B1E71BD16AAA79200219F7E /* Supporting Files */,
+			);
+			path = PDFFiller;
+			sourceTree = "<group>";
+		};
+		3B1E71BD16AAA79200219F7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E71BE16AAA79200219F7E /* PDFFiller-Info.plist */,
+				3B1E71BF16AAA79200219F7E /* InfoPlist.strings */,
+				3B1E71C216AAA79200219F7E /* main.m */,
+				3B1E71C416AAA79200219F7E /* PDFFiller-Prefix.pch */,
+				3B1E71C816AAA79200219F7E /* Default.png */,
+				3B1E71CA16AAA79200219F7E /* Default@2x.png */,
+				3B1E71CC16AAA79200219F7E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B1E71DA16AAA79200219F7E /* PDFFillerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E71E016AAA79200219F7E /* PDFFillerTests.h */,
+				3B1E71E116AAA79200219F7E /* PDFFillerTests.m */,
+				3B1E71DB16AAA79200219F7E /* Supporting Files */,
+			);
+			path = PDFFillerTests;
+			sourceTree = "<group>";
+		};
+		3B1E71DB16AAA79200219F7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E71DC16AAA79200219F7E /* PDFFillerTests-Info.plist */,
+				3B1E71DD16AAA79200219F7E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B1E71B216AAA79200219F7E /* PDFFiller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1E71E516AAA79200219F7E /* Build configuration list for PBXNativeTarget "PDFFiller" */;
+			buildPhases = (
+				3B1E71AF16AAA79200219F7E /* Sources */,
+				3B1E71B016AAA79200219F7E /* Frameworks */,
+				3B1E71B116AAA79200219F7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDFFiller;
+			productName = PDFFiller;
+			productReference = 3B1E71B316AAA79200219F7E /* PDFFiller.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B1E71D216AAA79200219F7E /* PDFFillerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1E71E816AAA79200219F7E /* Build configuration list for PBXNativeTarget "PDFFillerTests" */;
+			buildPhases = (
+				3B1E71CE16AAA79200219F7E /* Sources */,
+				3B1E71CF16AAA79200219F7E /* Frameworks */,
+				3B1E71D016AAA79200219F7E /* Resources */,
+				3B1E71D116AAA79200219F7E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B1E71D916AAA79200219F7E /* PBXTargetDependency */,
+			);
+			name = PDFFillerTests;
+			productName = PDFFillerTests;
+			productReference = 3B1E71D316AAA79200219F7E /* PDFFillerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B1E71AB16AAA79200219F7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KH;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Kim Hunter";
+			};
+			buildConfigurationList = 3B1E71AE16AAA79200219F7E /* Build configuration list for PBXProject "PDFFiller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B1E71AA16AAA79200219F7E;
+			productRefGroup = 3B1E71B416AAA79200219F7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B1E71B216AAA79200219F7E /* PDFFiller */,
+				3B1E71D216AAA79200219F7E /* PDFFillerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B1E71B116AAA79200219F7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E71C116AAA79200219F7E /* InfoPlist.strings in Resources */,
+				3B1E71C916AAA79200219F7E /* Default.png in Resources */,
+				3B1E71CB16AAA79200219F7E /* Default@2x.png in Resources */,
+				3B1E71CD16AAA79200219F7E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1E71D016AAA79200219F7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E71DF16AAA79200219F7E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B1E71D116AAA79200219F7E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B1E71AF16AAA79200219F7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E71C316AAA79200219F7E /* main.m in Sources */,
+				3B1E71C716AAA79200219F7E /* KHAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1E71CE16AAA79200219F7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E71E216AAA79200219F7E /* PDFFillerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B1E71D916AAA79200219F7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1E71B216AAA79200219F7E /* PDFFiller */;
+			targetProxy = 3B1E71D816AAA79200219F7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B1E71BF16AAA79200219F7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1E71C016AAA79200219F7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B1E71DD16AAA79200219F7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1E71DE16AAA79200219F7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B1E71E316AAA79200219F7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3B1E71E416AAA79200219F7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B1E71E616AAA79200219F7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDFFiller/PDFFiller-Prefix.pch";
+				INFOPLIST_FILE = "PDFFiller/PDFFiller-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B1E71E716AAA79200219F7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDFFiller/PDFFiller-Prefix.pch";
+				INFOPLIST_FILE = "PDFFiller/PDFFiller-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3B1E71E916AAA79200219F7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PDFFiller.app/PDFFiller";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDFFiller/PDFFiller-Prefix.pch";
+				INFOPLIST_FILE = "PDFFillerTests/PDFFillerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3B1E71EA16AAA79200219F7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PDFFiller.app/PDFFiller";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDFFiller/PDFFiller-Prefix.pch";
+				INFOPLIST_FILE = "PDFFillerTests/PDFFillerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B1E71AE16AAA79200219F7E /* Build configuration list for PBXProject "PDFFiller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1E71E316AAA79200219F7E /* Debug */,
+				3B1E71E416AAA79200219F7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B1E71E516AAA79200219F7E /* Build configuration list for PBXNativeTarget "PDFFiller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1E71E616AAA79200219F7E /* Debug */,
+				3B1E71E716AAA79200219F7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B1E71E816AAA79200219F7E /* Build configuration list for PBXNativeTarget "PDFFillerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1E71E916AAA79200219F7E /* Debug */,
+				3B1E71EA16AAA79200219F7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B1E71AB16AAA79200219F7E /* Project object */;
+}
