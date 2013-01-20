@@ -21,6 +21,14 @@ extern NSString *const kKHContentTypeDir;
 
 - (id)initWithBasePath:(NSString *)path;
 - (NSString *)fullPathForRelPath:(NSString *)relPath;
+
+/** build a directory structure with the given dictionary
+    @param fileDict dictionary of key(NSString)/values(NSArray)
+                    The key should is a path relative to the basePath
+                    A key with a suffix of '/' denotes an empty directory
+                    Use the correct array using KH()ContentInfoMake methods to return the correct array
+                        these are simplified to take primative types
+ */
 - (void)buildContent:(NSDictionary *)fileDict;
 
 + (NSString *)uniqueKey;
