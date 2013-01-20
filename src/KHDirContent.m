@@ -10,6 +10,7 @@
 #import "KHContentBuilder.h"
 
 @implementation KHDirContent
+
 + (id)contentWithArray:(NSArray *)array
 {
     return [[[self class] new] autorelease];

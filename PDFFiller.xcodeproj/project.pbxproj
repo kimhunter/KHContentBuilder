@@ -20,7 +20,6 @@
 		3B1E71D616AAA79200219F7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71B616AAA79200219F7E /* UIKit.framework */; };
 		3B1E71D716AAA79200219F7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71B816AAA79200219F7E /* Foundation.framework */; };
 		3B1E71DF16AAA79200219F7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E71DD16AAA79200219F7E /* InfoPlist.strings */; };
-		3B1E71E216AAA79200219F7E /* PDFFillerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71E116AAA79200219F7E /* PDFFillerTests.m */; };
 		3B1E71F416AAB48800219F7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71BA16AAA79200219F7E /* CoreGraphics.framework */; };
 		3B4BAA7016ABECBF00B9315A /* KHContentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6516ABECBF00B9315A /* KHContentBuilder.m */; };
 		3B4BAA7116ABECBF00B9315A /* KHContentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6516ABECBF00B9315A /* KHContentBuilder.m */; };
@@ -34,7 +33,6 @@
 		3B4BAA7916ABECBF00B9315A /* KHPDFMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6D16ABECBF00B9315A /* KHPDFMaker.m */; };
 		3B4BAA7A16ABECBF00B9315A /* KHTextContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */; };
 		3B4BAA7B16ABECBF00B9315A /* KHTextContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */; };
-		3B4BAA8016ABED4300B9315A /* KHPDFMakerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA7D16ABED4300B9315A /* KHPDFMakerTest.m */; };
 		3B4BAA8116ABED4300B9315A /* UTKHContentBuilderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA7F16ABED4300B9315A /* UTKHContentBuilderTest.m */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +64,6 @@
 		3B1E71D416AAA79200219F7E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3B1E71DC16AAA79200219F7E /* PDFFillerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDFFillerTests-Info.plist"; sourceTree = "<group>"; };
 		3B1E71DE16AAA79200219F7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3B1E71E016AAA79200219F7E /* PDFFillerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFFillerTests.h; sourceTree = "<group>"; };
-		3B1E71E116AAA79200219F7E /* PDFFillerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFFillerTests.m; sourceTree = "<group>"; };
 		3B4BAA6316ABECBF00B9315A /* KHContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHContent.h; sourceTree = "<group>"; };
 		3B4BAA6416ABECBF00B9315A /* KHContentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHContentBuilder.h; sourceTree = "<group>"; };
 		3B4BAA6516ABECBF00B9315A /* KHContentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHContentBuilder.m; sourceTree = "<group>"; };
@@ -81,8 +77,6 @@
 		3B4BAA6D16ABECBF00B9315A /* KHPDFMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFMaker.m; sourceTree = "<group>"; };
 		3B4BAA6E16ABECBF00B9315A /* KHTextContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHTextContent.h; sourceTree = "<group>"; };
 		3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHTextContent.m; sourceTree = "<group>"; };
-		3B4BAA7C16ABED4300B9315A /* KHPDFMakerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFMakerTest.h; sourceTree = "<group>"; };
-		3B4BAA7D16ABED4300B9315A /* KHPDFMakerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFMakerTest.m; sourceTree = "<group>"; };
 		3B4BAA7E16ABED4300B9315A /* UTKHContentBuilderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTKHContentBuilderTest.h; sourceTree = "<group>"; };
 		3B4BAA7F16ABED4300B9315A /* UTKHContentBuilderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTKHContentBuilderTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,12 +165,8 @@
 		3B1E71DA16AAA79200219F7E /* PDFFillerTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B4BAA7C16ABED4300B9315A /* KHPDFMakerTest.h */,
-				3B4BAA7D16ABED4300B9315A /* KHPDFMakerTest.m */,
 				3B4BAA7E16ABED4300B9315A /* UTKHContentBuilderTest.h */,
 				3B4BAA7F16ABED4300B9315A /* UTKHContentBuilderTest.m */,
-				3B1E71E016AAA79200219F7E /* PDFFillerTests.h */,
-				3B1E71E116AAA79200219F7E /* PDFFillerTests.m */,
 				3B1E71DB16AAA79200219F7E /* Supporting Files */,
 			);
 			path = PDFFillerTests;
@@ -336,14 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1E71E216AAA79200219F7E /* PDFFillerTests.m in Sources */,
 				3B4BAA7116ABECBF00B9315A /* KHContentBuilder.m in Sources */,
 				3B4BAA7316ABECBF00B9315A /* KHDirContent.m in Sources */,
 				3B4BAA7516ABECBF00B9315A /* KHPDFContent.m in Sources */,
 				3B4BAA7716ABECBF00B9315A /* KHPDFHotspot.m in Sources */,
 				3B4BAA7916ABECBF00B9315A /* KHPDFMaker.m in Sources */,
 				3B4BAA7B16ABECBF00B9315A /* KHTextContent.m in Sources */,
-				3B4BAA8016ABED4300B9315A /* KHPDFMakerTest.m in Sources */,
 				3B4BAA8116ABED4300B9315A /* UTKHContentBuilderTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@
 
 @protocol KHContent <NSObject>
 @required
-//+ (id)contentWithDictionary:(NSDictionary *)dict;
+
 + (id)contentWithArray:(NSArray *)array;
 
 - (NSString *)contentType;
