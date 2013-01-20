@@ -11,5 +11,5 @@
 #import "KHContentBuilder.h"
 
 @interface KHPDFContent : NSObject<KHContent>
-
+@property (retain, nonatomic) KHPDFMaker *pdfMaker;
 @end

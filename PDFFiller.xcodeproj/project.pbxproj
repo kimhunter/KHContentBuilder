@@ -35,6 +35,7 @@
 		3B4BAA5916ABD8B000B9315A /* KHPDFContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5716ABD8B000B9315A /* KHPDFContent.m */; };
 		3B4BAA5C16ABE3B200B9315A /* KHDirContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5B16ABE3B200B9315A /* KHDirContent.m */; };
 		3B4BAA5D16ABE3B200B9315A /* KHDirContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5B16ABE3B200B9315A /* KHDirContent.m */; };
+		3B4BAA6016ABE67700B9315A /* UTKHContentBuilderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5F16ABE67700B9315A /* UTKHContentBuilderTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		3B4BAA5716ABD8B000B9315A /* KHPDFContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFContent.m; sourceTree = "<group>"; };
 		3B4BAA5A16ABE3B200B9315A /* KHDirContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHDirContent.h; sourceTree = "<group>"; };
 		3B4BAA5B16ABE3B200B9315A /* KHDirContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHDirContent.m; sourceTree = "<group>"; };
+		3B4BAA5E16ABE67700B9315A /* UTKHContentBuilderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTKHContentBuilderTest.h; sourceTree = "<group>"; };
+		3B4BAA5F16ABE67700B9315A /* UTKHContentBuilderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTKHContentBuilderTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				3B4BAA5716ABD8B000B9315A /* KHPDFContent.m */,
 				3B4BAA5A16ABE3B200B9315A /* KHDirContent.h */,
 				3B4BAA5B16ABE3B200B9315A /* KHDirContent.m */,
+				3B4BAA5E16ABE67700B9315A /* UTKHContentBuilderTest.h */,
+				3B4BAA5F16ABE67700B9315A /* UTKHContentBuilderTest.m */,
 			);
 			path = PDFFiller;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				3B4BAA5516ABD5D100B9315A /* KHTextContent.m in Sources */,
 				3B4BAA5916ABD8B000B9315A /* KHPDFContent.m in Sources */,
 				3B4BAA5D16ABE3B200B9315A /* KHDirContent.m in Sources */,
+				3B4BAA6016ABE67700B9315A /* UTKHContentBuilderTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

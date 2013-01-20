@@ -10,7 +10,6 @@
 #import "KHPDFMaker.h"
 
 @interface KHPDFContent ()
-@property (retain, nonatomic) KHPDFMaker *pdfMaker;
 @property (assign, nonatomic) CGSize size;
 @property (assign, nonatomic) NSInteger pageCount;
 @property (retain, nonatomic) NSArray *hotspots;
@@ -58,9 +57,5 @@
 
 #pragma mark - Optional
 
-- (void)setPdfMaker:(KHPDFMaker *)pdfMaker
-{
-    self.pdfMaker = pdfMaker;
-}
 
 @end

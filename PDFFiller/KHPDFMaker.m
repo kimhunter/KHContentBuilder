@@ -12,14 +12,6 @@
 
 
 @implementation KHPDFMaker
-- (NSString *)uniqueKey
-{
-	CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
-	CFStringRef stringRef = CFUUIDCreateString(kCFAllocatorDefault, uuidRef);
-	CFRelease(uuidRef);
-	NSString *uuid = (NSString *)stringRef;
-	return [uuid autorelease];
-}
 
 - (void)build
 {

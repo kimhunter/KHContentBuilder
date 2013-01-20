@@ -19,4 +19,7 @@ extern NSString *const kKHContentTypeDir;
 @property (retain) NSFileManager *fm;
 @property (retain) NSString *basePath;
 
+- (id)initWithBasePath:(NSString *)path;
++ (NSString *)uniqueKey;
+- (void)buildContent:(NSDictionary *)fileDict;
 @end

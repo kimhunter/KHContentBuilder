@@ -56,6 +56,15 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     return self;
 }
 
++ (NSString *)uniqueKey
+{
+	CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+	CFStringRef stringRef = CFUUIDCreateString(kCFAllocatorDefault, uuidRef);
+	CFRelease(uuidRef);
+	NSString *uuid = (NSString *)stringRef;
+	return [uuid autorelease];
+}
+
 - (id)initWithBasePath:(NSString *)path
 {
     if ([self init])
@@ -103,6 +112,10 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     }
     
     NSString *fullPath = [self.basePath stringByAppendingPathComponent:filePath];
+    [_fm createDirectoryAtPath:[fullPath stringByDeletingLastPathComponent]
+   withIntermediateDirectories:YES
+                    attributes:nil
+                         error:NULL];
     [content writeToFile:fullPath];
 
 }
