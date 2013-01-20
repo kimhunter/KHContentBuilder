@@ -11,6 +11,8 @@
 #import "KHContent.h"
 #import "KHPDFContent.h"
 #import "KHTextContent.h"
+#import "KHDirContent.h"
+
 
 NSString *const kKHContentTypePDF = @"kKHContentTypePDF";
 NSString *const kKHContentTypeText = @"kKHContentTypeText";
@@ -44,6 +46,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
         self.contentClassMap = @{
                                  kKHContentTypePDF : [KHPDFContent class],
                                  kKHContentTypeText: [KHTextContent class],
+                                 kKHContentTypeDir : [KHDirContent class],
                                 };
         self.contentTypeMap = @{
                                 @"txt": kKHContentTypeText,
@@ -79,6 +82,11 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 {
     //TODO: Add error logging
 	[_fm createDirectoryAtPath:self.basePath withIntermediateDirectories:YES attributes:nil error:NULL];
+}
+
+- (NSString *)fullPathForRelPath:(NSString *)relPath
+{
+    return [self.basePath stringByAppendingPathComponent:relPath];
 }
 
 - (NSString *)contentTypeForFileName:(NSString *)path

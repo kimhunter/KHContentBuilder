@@ -20,6 +20,8 @@ extern NSString *const kKHContentTypeDir;
 @property (retain) NSString *basePath;
 
 - (id)initWithBasePath:(NSString *)path;
-+ (NSString *)uniqueKey;
+- (NSString *)fullPathForRelPath:(NSString *)relPath;
 - (void)buildContent:(NSDictionary *)fileDict;
+
++ (NSString *)uniqueKey;
 @end
