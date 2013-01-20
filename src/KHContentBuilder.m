@@ -43,14 +43,23 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     if (self)
 	{
         
-        self.contentClassMap = @{
+        self.contentClassMap = @{ // add here when the type is supported
                                  kKHContentTypePDF : [KHPDFContent class],
                                  kKHContentTypeText: [KHTextContent class],
                                  kKHContentTypeDir : [KHDirContent class],
                                 };
+        
         self.contentTypeMap = @{
-                                @"txt": kKHContentTypeText,
-                                @"pdf": kKHContentTypePDF,
+                                @"pdf" : kKHContentTypePDF,
+                                @"txt" : kKHContentTypeText,
+                                @"html": kKHContentTypeText,
+                                @"htm" : kKHContentTypeText,
+                                @"css" : kKHContentTypeText,
+                                @"url" : kKHContentTypeText,
+                                // below not supported yet
+                                @"png" : kKHContentTypePNG,
+                                @"jpg" : kKHContentTypeJpeg,
+                                @"jpeg": kKHContentTypeJpeg,
                                 };
         
         _pdfMaker = [[KHPDFMaker alloc] init];
