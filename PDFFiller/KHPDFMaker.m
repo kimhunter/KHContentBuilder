@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Kim Hunter. All rights reserved.
 //
 
-#import "KHPDFMaker.h"
 #import <CoreGraphics/CoreGraphics.h>
+#import "KHPDFMaker.h"
+#import "KHPDFHotspot.h"
 
 static size_t KHPDFMaker_dataConsumerPutBytes
 (
@@ -56,8 +57,12 @@ static CGDataConsumerRef KHPDFMaker_dataConsumerCreate
 
 - (void)build
 {
-    [self buildPdfWithSize:CGSizeMake(100, 100) pages:3 andHotspots:nil];
+    
+    KHPDFHotspot *hs = [KHPDFHotspot hotspotWithString:@"this is my test" withRect:CGRectMake(20.0, 20.0, 70.0, 70.0) onPage:1];
+    NSData *pdfData = [self buildPdfWithSize:CGSizeMake(100, 100) pages:3 andHotspots:@[hs]];
+    [pdfData writeToFile:@"/Users/kim/Desktop/Test.pdf" atomically:YES];
 }
+
 - (NSData *)buildPdfWithSize:(CGSize)defaultSize pages:(NSInteger)pageCount andHotspots:(NSArray *)hotspots
 {
     CGRect mediaBox = CGRectZero;
@@ -69,12 +74,19 @@ static CGDataConsumerRef KHPDFMaker_dataConsumerCreate
     CGContextRef pdfContext = CGPDFContextCreate(dataConsumer, &mediaBox, NULL);
     CGDataConsumerRelease(dataConsumer);
 
-    for (int i = 0; i < 20; ++i)
+    for (int i = 1; i <= pageCount; ++i)
     {
         NSArray *pageHotspots = [hotspots filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"page = %d", i]];
+        
         CGPDFContextBeginPage(pdfContext, NULL);
         CGContextSetFillColorWithColor(pdfContext, [[UIColor redColor] CGColor]);
-        CGContextFillRect(pdfContext, CGRectInset(mediaBox, 20, 20));
+//        CGContextFillRect(pdfContext, CGRectInset(mediaBox, 20, 20));
+        
+        for (KHPDFHotspot *hotspot in pageHotspots)
+        {
+            [hotspot addToContext:pdfContext];
+        }
+        
         CGPDFContextEndPage(pdfContext);
         pageHotspots = nil;
     }
@@ -83,7 +95,6 @@ static CGDataConsumerRef KHPDFMaker_dataConsumerCreate
 	CGContextRelease(pdfContext);
     
     NSData *returnData = [[(NSData *)pdfData retain] autorelease];
-//    [(NSData *)pdfData writeToFile:@"/Users/kim/Desktop/Test.pdf" atomically:YES];
     CFRelease(pdfData);
     return returnData;
 }

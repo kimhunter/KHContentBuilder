@@ -22,6 +22,22 @@
 
 - (void)testWhat
 {
+    CFURLRef url = NULL;
+    NSURL *nUrl = nil;
+    NSString *str = [@"this is a test" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    nUrl = [NSURL URLWithString:str relativeToURL:[NSURL URLWithString:@"http://"]];
+
+//    url = CFURLCreateWithBytes(NULL, "this is a test", strlen("this is a test"), NSUTF8StringEncoding, NULL);
+////     = CFURLCreateWithString(kCFAllocatorDefault, (CFStringRef)@"this is a test", NULL);
+    if (url)
+    {
+        NSLog(@"url = %@", (id)url);
+        CFRelease(url);
+    }
+    if (nUrl)
+    {
+        NSLog(@"nUrl = %@", (id)nUrl);
+    }
 
 }
 

@@ -25,6 +25,8 @@
 		3B1E71F016AAA98000219F7E /* KHPDFMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71EF16AAA98000219F7E /* KHPDFMaker.m */; };
 		3B1E71F116AAA98000219F7E /* KHPDFMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71EF16AAA98000219F7E /* KHPDFMaker.m */; };
 		3B1E71F416AAB48800219F7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71BA16AAA79200219F7E /* CoreGraphics.framework */; };
+		3B4BAA4B16ABBD4D00B9315A /* KHPDFHotspot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA4A16ABBD4D00B9315A /* KHPDFHotspot.m */; };
+		3B4BAA4C16ABBD4D00B9315A /* KHPDFHotspot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA4A16ABBD4D00B9315A /* KHPDFHotspot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		3B1E71EC16AAA93F00219F7E /* KHPDFMakerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFMakerTest.m; sourceTree = "<group>"; };
 		3B1E71EE16AAA98000219F7E /* KHPDFMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFMaker.h; sourceTree = "<group>"; };
 		3B1E71EF16AAA98000219F7E /* KHPDFMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFMaker.m; sourceTree = "<group>"; };
+		3B4BAA4916ABBD4D00B9315A /* KHPDFHotspot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFHotspot.h; sourceTree = "<group>"; };
+		3B4BAA4A16ABBD4D00B9315A /* KHPDFHotspot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFHotspot.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				3B1E71EC16AAA93F00219F7E /* KHPDFMakerTest.m */,
 				3B1E71EE16AAA98000219F7E /* KHPDFMaker.h */,
 				3B1E71EF16AAA98000219F7E /* KHPDFMaker.m */,
+				3B4BAA4916ABBD4D00B9315A /* KHPDFHotspot.h */,
+				3B4BAA4A16ABBD4D00B9315A /* KHPDFHotspot.m */,
 			);
 			path = PDFFiller;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 				3B1E71C316AAA79200219F7E /* main.m in Sources */,
 				3B1E71C716AAA79200219F7E /* KHAppDelegate.m in Sources */,
 				3B1E71F016AAA98000219F7E /* KHPDFMaker.m in Sources */,
+				3B4BAA4B16ABBD4D00B9315A /* KHPDFHotspot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +296,7 @@
 				3B1E71E216AAA79200219F7E /* PDFFillerTests.m in Sources */,
 				3B1E71ED16AAA93F00219F7E /* KHPDFMakerTest.m in Sources */,
 				3B1E71F116AAA98000219F7E /* KHPDFMaker.m in Sources */,
+				3B4BAA4C16ABBD4D00B9315A /* KHPDFHotspot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +459,7 @@
 				3B1E71E716AAA79200219F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B1E71E816AAA79200219F7E /* Build configuration list for PBXNativeTarget "PDFFillerTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +468,7 @@
 				3B1E71EA16AAA79200219F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
