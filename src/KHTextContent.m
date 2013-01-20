@@ -9,6 +9,11 @@
 #import "KHTextContent.h"
 #import "KHContentBuilder.h"
 
+NSArray *KHTextContentInfoMake(NSString *content)
+{
+    return @[content];
+}
+
 @interface KHTextContent ()
 @property (retain, nonatomic) NSString *content;
 @end

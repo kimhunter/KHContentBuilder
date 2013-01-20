@@ -10,6 +10,8 @@
 #import "KHContent.h"
 #import "KHContentBuilder.h"
 
+NSArray *KHPDFContentInfoMake(CGSize size, NSInteger noOfPages, NSArray *hotspots);
+
 @interface KHPDFContent : NSObject<KHContent>
 @property (retain, nonatomic) KHPDFMaker *pdfMaker;
 @end

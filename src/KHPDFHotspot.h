@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define KHPDFHotspotMake(S, Rect, Page) [KHPDFHotspot hotspotWithString:(S) withRect:(Rect) onPage:(Page)]
+
 @interface KHPDFHotspot : NSObject
 @property (assign, nonatomic) CGRect rect;
 @property (assign, nonatomic) NSInteger page;

@@ -9,6 +9,8 @@
 #import "UTKHContentBuilderTest.h"
 #import "KHContentBuilder.h"
 #import "KHPDFHotspot.h"
+#import "KHTextContent.h"
+#import "KHPDFContent.h"
 
 @interface UTKHContentBuilderTest ()
 @property (retain) KHContentBuilder *cb;
@@ -35,9 +37,13 @@
     self.cb = nil;
 }
 
+#define KHIpadPortraitSize CGSizeMake(768.0, 1024.0)
+#define KHIpadLandscapeSize CGSizeMake(1024.0, 768.0)
+
 #define KHSizeString(W,H) NSStringFromCGSize(CGSizeMake((W), (H)))
-#define KHIpadPortraitSize KHSizeString(768.0, 1024.0)
-#define KHPDFHotspotMake(S, Rect, Page) [KHPDFHotspot hotspotWithString:(S) withRect:(Rect) onPage:(Page)]
+#define KHIpadPortraitSizeString NSStringFromCGSize((KHIpadPortraitSize))
+#define KHIpadLandscapeSizeString NSStringFromCGSize((KHIpadPortraitSize))
+
 #define KHAssertFileExists(FilePath) STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:(FilePath)], nil)
 
 - (BOOL)isDir:(NSString *)dirPath
@@ -52,7 +58,7 @@
     NSString *fileName = @"file.txt";
     NSString *content = @"This is the file";
     
-    [_cb buildContent:@{fileName: @[content]}];
+    [_cb buildContent:@{fileName: KHTextContentInfoMake(content)}];
     NSString *fullPath = [_cb fullPathForRelPath:fileName];
     KHAssertFileExists(fullPath);
     NSString *fileContent = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:NULL];
@@ -68,16 +74,12 @@
 
 - (void)testBuildAdvanced
 {
-    [_cb buildContent:@{
-                            @"20-Content/a.txt" : @[@"This is the file"],
-                            @"30-Wow/P1-1.pdf"  : @[KHIpadPortraitSize,
-                                                    @2,
-                                                    @[
-                                                        KHPDFHotspotMake(@"Map1", CGRectMake(100, 100, 400, 400), 1),
-                                                        KHPDFHotspotMake(@"Map2", CGRectMake(100, 400, 400, 400), 2),
-                                                     ]
-                                                  ],
-        }];
+    [_cb buildContent:@{@"20-Content/a.txt" : KHTextContentInfoMake(@"This is the file"),
+                        @"30-Wow/P1-1.pdf"  : KHPDFContentInfoMake(KHIpadPortraitSize, 2, @[
+                                                                   KHPDFHotspotMake(@"Map1", CGRectMake(100, 100, 400, 400), 1),
+                                                                   KHPDFHotspotMake(@"Map2", CGRectMake(100, 400, 400, 400), 2),
+                                                                   ]),
+                        }];
     
     NSString *fullPath = [_cb fullPathForRelPath:@"20-Content/a.txt"];
     NSString *content = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:NULL];

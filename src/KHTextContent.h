@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "KHContent.h"
+
+NSArray *KHTextContentInfoMake(NSString *content);
+
 @interface KHTextContent : NSObject<KHContent>
 
 @end

@@ -9,6 +9,16 @@
 #import "KHPDFContent.h"
 #import "KHPDFMaker.h"
 
+NSArray *KHPDFContentInfoMake(CGSize size, NSInteger noOfPages, NSArray *hotspots)
+{
+    if (hotspots == nil)
+    {
+        hotspots = @[];
+    }
+    
+    return @[NSStringFromCGSize(size), @(noOfPages), hotspots];
+}
+
 @interface KHPDFContent ()
 @property (assign, nonatomic) CGSize size;
 @property (assign, nonatomic) NSInteger pageCount;
