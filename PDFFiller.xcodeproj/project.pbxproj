@@ -22,20 +22,20 @@
 		3B1E71DF16AAA79200219F7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E71DD16AAA79200219F7E /* InfoPlist.strings */; };
 		3B1E71E216AAA79200219F7E /* PDFFillerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71E116AAA79200219F7E /* PDFFillerTests.m */; };
 		3B1E71ED16AAA93F00219F7E /* KHPDFMakerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71EC16AAA93F00219F7E /* KHPDFMakerTest.m */; };
-		3B1E71F016AAA98000219F7E /* KHPDFMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71EF16AAA98000219F7E /* KHPDFMaker.m */; };
-		3B1E71F116AAA98000219F7E /* KHPDFMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E71EF16AAA98000219F7E /* KHPDFMaker.m */; };
 		3B1E71F416AAB48800219F7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1E71BA16AAA79200219F7E /* CoreGraphics.framework */; };
-		3B4BAA4B16ABBD4D00B9315A /* KHPDFHotspot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA4A16ABBD4D00B9315A /* KHPDFHotspot.m */; };
-		3B4BAA4C16ABBD4D00B9315A /* KHPDFHotspot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA4A16ABBD4D00B9315A /* KHPDFHotspot.m */; };
-		3B4BAA4F16ABD27500B9315A /* KHContentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA4E16ABD27500B9315A /* KHContentBuilder.m */; };
-		3B4BAA5016ABD27500B9315A /* KHContentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA4E16ABD27500B9315A /* KHContentBuilder.m */; };
-		3B4BAA5416ABD5D100B9315A /* KHTextContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5316ABD5D100B9315A /* KHTextContent.m */; };
-		3B4BAA5516ABD5D100B9315A /* KHTextContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5316ABD5D100B9315A /* KHTextContent.m */; };
-		3B4BAA5816ABD8B000B9315A /* KHPDFContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5716ABD8B000B9315A /* KHPDFContent.m */; };
-		3B4BAA5916ABD8B000B9315A /* KHPDFContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5716ABD8B000B9315A /* KHPDFContent.m */; };
-		3B4BAA5C16ABE3B200B9315A /* KHDirContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5B16ABE3B200B9315A /* KHDirContent.m */; };
-		3B4BAA5D16ABE3B200B9315A /* KHDirContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5B16ABE3B200B9315A /* KHDirContent.m */; };
 		3B4BAA6016ABE67700B9315A /* UTKHContentBuilderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA5F16ABE67700B9315A /* UTKHContentBuilderTest.m */; };
+		3B4BAA7016ABECBF00B9315A /* KHContentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6516ABECBF00B9315A /* KHContentBuilder.m */; };
+		3B4BAA7116ABECBF00B9315A /* KHContentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6516ABECBF00B9315A /* KHContentBuilder.m */; };
+		3B4BAA7216ABECBF00B9315A /* KHDirContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6716ABECBF00B9315A /* KHDirContent.m */; };
+		3B4BAA7316ABECBF00B9315A /* KHDirContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6716ABECBF00B9315A /* KHDirContent.m */; };
+		3B4BAA7416ABECBF00B9315A /* KHPDFContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6916ABECBF00B9315A /* KHPDFContent.m */; };
+		3B4BAA7516ABECBF00B9315A /* KHPDFContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6916ABECBF00B9315A /* KHPDFContent.m */; };
+		3B4BAA7616ABECBF00B9315A /* KHPDFHotspot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6B16ABECBF00B9315A /* KHPDFHotspot.m */; };
+		3B4BAA7716ABECBF00B9315A /* KHPDFHotspot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6B16ABECBF00B9315A /* KHPDFHotspot.m */; };
+		3B4BAA7816ABECBF00B9315A /* KHPDFMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6D16ABECBF00B9315A /* KHPDFMaker.m */; };
+		3B4BAA7916ABECBF00B9315A /* KHPDFMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6D16ABECBF00B9315A /* KHPDFMaker.m */; };
+		3B4BAA7A16ABECBF00B9315A /* KHTextContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */; };
+		3B4BAA7B16ABECBF00B9315A /* KHTextContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,21 +70,21 @@
 		3B1E71E116AAA79200219F7E /* PDFFillerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFFillerTests.m; sourceTree = "<group>"; };
 		3B1E71EB16AAA93F00219F7E /* KHPDFMakerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFMakerTest.h; sourceTree = "<group>"; };
 		3B1E71EC16AAA93F00219F7E /* KHPDFMakerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFMakerTest.m; sourceTree = "<group>"; };
-		3B1E71EE16AAA98000219F7E /* KHPDFMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFMaker.h; sourceTree = "<group>"; };
-		3B1E71EF16AAA98000219F7E /* KHPDFMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFMaker.m; sourceTree = "<group>"; };
-		3B4BAA4916ABBD4D00B9315A /* KHPDFHotspot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFHotspot.h; sourceTree = "<group>"; };
-		3B4BAA4A16ABBD4D00B9315A /* KHPDFHotspot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFHotspot.m; sourceTree = "<group>"; };
-		3B4BAA4D16ABD27500B9315A /* KHContentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHContentBuilder.h; sourceTree = "<group>"; };
-		3B4BAA4E16ABD27500B9315A /* KHContentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHContentBuilder.m; sourceTree = "<group>"; };
-		3B4BAA5116ABD54200B9315A /* KHContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHContent.h; sourceTree = "<group>"; };
-		3B4BAA5216ABD5D100B9315A /* KHTextContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHTextContent.h; sourceTree = "<group>"; };
-		3B4BAA5316ABD5D100B9315A /* KHTextContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHTextContent.m; sourceTree = "<group>"; };
-		3B4BAA5616ABD8B000B9315A /* KHPDFContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFContent.h; sourceTree = "<group>"; };
-		3B4BAA5716ABD8B000B9315A /* KHPDFContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFContent.m; sourceTree = "<group>"; };
-		3B4BAA5A16ABE3B200B9315A /* KHDirContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHDirContent.h; sourceTree = "<group>"; };
-		3B4BAA5B16ABE3B200B9315A /* KHDirContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHDirContent.m; sourceTree = "<group>"; };
 		3B4BAA5E16ABE67700B9315A /* UTKHContentBuilderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTKHContentBuilderTest.h; sourceTree = "<group>"; };
 		3B4BAA5F16ABE67700B9315A /* UTKHContentBuilderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTKHContentBuilderTest.m; sourceTree = "<group>"; };
+		3B4BAA6316ABECBF00B9315A /* KHContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHContent.h; sourceTree = "<group>"; };
+		3B4BAA6416ABECBF00B9315A /* KHContentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHContentBuilder.h; sourceTree = "<group>"; };
+		3B4BAA6516ABECBF00B9315A /* KHContentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHContentBuilder.m; sourceTree = "<group>"; };
+		3B4BAA6616ABECBF00B9315A /* KHDirContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHDirContent.h; sourceTree = "<group>"; };
+		3B4BAA6716ABECBF00B9315A /* KHDirContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHDirContent.m; sourceTree = "<group>"; };
+		3B4BAA6816ABECBF00B9315A /* KHPDFContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFContent.h; sourceTree = "<group>"; };
+		3B4BAA6916ABECBF00B9315A /* KHPDFContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFContent.m; sourceTree = "<group>"; };
+		3B4BAA6A16ABECBF00B9315A /* KHPDFHotspot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFHotspot.h; sourceTree = "<group>"; };
+		3B4BAA6B16ABECBF00B9315A /* KHPDFHotspot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFHotspot.m; sourceTree = "<group>"; };
+		3B4BAA6C16ABECBF00B9315A /* KHPDFMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFMaker.h; sourceTree = "<group>"; };
+		3B4BAA6D16ABECBF00B9315A /* KHPDFMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFMaker.m; sourceTree = "<group>"; };
+		3B4BAA6E16ABECBF00B9315A /* KHTextContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHTextContent.h; sourceTree = "<group>"; };
+		3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHTextContent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +115,7 @@
 		3B1E71AA16AAA79200219F7E = {
 			isa = PBXGroup;
 			children = (
+				3B4BAA6216ABECBF00B9315A /* src */,
 				3B1E71BC16AAA79200219F7E /* PDFFiller */,
 				3B1E71DA16AAA79200219F7E /* PDFFillerTests */,
 				3B1E71B516AAA79200219F7E /* Frameworks */,
@@ -151,19 +152,6 @@
 				3B1E71BD16AAA79200219F7E /* Supporting Files */,
 				3B1E71EB16AAA93F00219F7E /* KHPDFMakerTest.h */,
 				3B1E71EC16AAA93F00219F7E /* KHPDFMakerTest.m */,
-				3B1E71EE16AAA98000219F7E /* KHPDFMaker.h */,
-				3B1E71EF16AAA98000219F7E /* KHPDFMaker.m */,
-				3B4BAA4916ABBD4D00B9315A /* KHPDFHotspot.h */,
-				3B4BAA4A16ABBD4D00B9315A /* KHPDFHotspot.m */,
-				3B4BAA4D16ABD27500B9315A /* KHContentBuilder.h */,
-				3B4BAA4E16ABD27500B9315A /* KHContentBuilder.m */,
-				3B4BAA5116ABD54200B9315A /* KHContent.h */,
-				3B4BAA5216ABD5D100B9315A /* KHTextContent.h */,
-				3B4BAA5316ABD5D100B9315A /* KHTextContent.m */,
-				3B4BAA5616ABD8B000B9315A /* KHPDFContent.h */,
-				3B4BAA5716ABD8B000B9315A /* KHPDFContent.m */,
-				3B4BAA5A16ABE3B200B9315A /* KHDirContent.h */,
-				3B4BAA5B16ABE3B200B9315A /* KHDirContent.m */,
 				3B4BAA5E16ABE67700B9315A /* UTKHContentBuilderTest.h */,
 				3B4BAA5F16ABE67700B9315A /* UTKHContentBuilderTest.m */,
 			);
@@ -201,6 +189,26 @@
 				3B1E71DD16AAA79200219F7E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B4BAA6216ABECBF00B9315A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BAA6316ABECBF00B9315A /* KHContent.h */,
+				3B4BAA6416ABECBF00B9315A /* KHContentBuilder.h */,
+				3B4BAA6516ABECBF00B9315A /* KHContentBuilder.m */,
+				3B4BAA6616ABECBF00B9315A /* KHDirContent.h */,
+				3B4BAA6716ABECBF00B9315A /* KHDirContent.m */,
+				3B4BAA6816ABECBF00B9315A /* KHPDFContent.h */,
+				3B4BAA6916ABECBF00B9315A /* KHPDFContent.m */,
+				3B4BAA6A16ABECBF00B9315A /* KHPDFHotspot.h */,
+				3B4BAA6B16ABECBF00B9315A /* KHPDFHotspot.m */,
+				3B4BAA6C16ABECBF00B9315A /* KHPDFMaker.h */,
+				3B4BAA6D16ABECBF00B9315A /* KHPDFMaker.m */,
+				3B4BAA6E16ABECBF00B9315A /* KHTextContent.h */,
+				3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,12 +323,12 @@
 			files = (
 				3B1E71C316AAA79200219F7E /* main.m in Sources */,
 				3B1E71C716AAA79200219F7E /* KHAppDelegate.m in Sources */,
-				3B1E71F016AAA98000219F7E /* KHPDFMaker.m in Sources */,
-				3B4BAA4B16ABBD4D00B9315A /* KHPDFHotspot.m in Sources */,
-				3B4BAA4F16ABD27500B9315A /* KHContentBuilder.m in Sources */,
-				3B4BAA5416ABD5D100B9315A /* KHTextContent.m in Sources */,
-				3B4BAA5816ABD8B000B9315A /* KHPDFContent.m in Sources */,
-				3B4BAA5C16ABE3B200B9315A /* KHDirContent.m in Sources */,
+				3B4BAA7016ABECBF00B9315A /* KHContentBuilder.m in Sources */,
+				3B4BAA7216ABECBF00B9315A /* KHDirContent.m in Sources */,
+				3B4BAA7416ABECBF00B9315A /* KHPDFContent.m in Sources */,
+				3B4BAA7616ABECBF00B9315A /* KHPDFHotspot.m in Sources */,
+				3B4BAA7816ABECBF00B9315A /* KHPDFMaker.m in Sources */,
+				3B4BAA7A16ABECBF00B9315A /* KHTextContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,13 +338,13 @@
 			files = (
 				3B1E71E216AAA79200219F7E /* PDFFillerTests.m in Sources */,
 				3B1E71ED16AAA93F00219F7E /* KHPDFMakerTest.m in Sources */,
-				3B1E71F116AAA98000219F7E /* KHPDFMaker.m in Sources */,
-				3B4BAA4C16ABBD4D00B9315A /* KHPDFHotspot.m in Sources */,
-				3B4BAA5016ABD27500B9315A /* KHContentBuilder.m in Sources */,
-				3B4BAA5516ABD5D100B9315A /* KHTextContent.m in Sources */,
-				3B4BAA5916ABD8B000B9315A /* KHPDFContent.m in Sources */,
-				3B4BAA5D16ABE3B200B9315A /* KHDirContent.m in Sources */,
 				3B4BAA6016ABE67700B9315A /* UTKHContentBuilderTest.m in Sources */,
+				3B4BAA7116ABECBF00B9315A /* KHContentBuilder.m in Sources */,
+				3B4BAA7316ABECBF00B9315A /* KHDirContent.m in Sources */,
+				3B4BAA7516ABECBF00B9315A /* KHPDFContent.m in Sources */,
+				3B4BAA7716ABECBF00B9315A /* KHPDFHotspot.m in Sources */,
+				3B4BAA7916ABECBF00B9315A /* KHPDFMaker.m in Sources */,
+				3B4BAA7B16ABECBF00B9315A /* KHTextContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
