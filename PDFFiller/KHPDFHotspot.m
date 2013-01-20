@@ -22,11 +22,13 @@
     hs.rect = hsRect;
     hs.page = page;
     hs.shouldEscapeAndAddHttpIfMissing = YES;
+    hs.fillWithColor = [UIColor grayColor];
     return hs;
 }
 
 
-- (void)addToContext:(CGContextRef)c
+
+- (void)addToContext:(CGContextRef)c withPageSize:(CGSize)pageSize
 {
     CFURLRef url = NULL;
     CFStringRef string = NULL;
@@ -40,10 +42,20 @@
 
     if (url != NULL)
     {
-        CGContextFillRect(c, self.rect);
-        CGPDFContextSetURLForRect(c, url, self.rect);
+        CGContextSaveGState(c);
+        CGContextScaleCTM(c, 1.0, -1.0);
+        CGContextTranslateCTM(c, 0.0, -pageSize.height);
+
+        CGAffineTransform transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, -1.0),CGAffineTransformMakeTranslation(0.0, pageSize.height));
+        CGPDFContextSetURLForRect(c, url, CGRectApplyAffineTransform(self.rect, transform));
         CFRelease(url);
-    }
+
+        if (self.fillWithColor != nil)
+        {
+            CGContextSetFillColorWithColor(c, [self.fillWithColor CGColor]);
+            CGContextFillRect(c, self.rect);
+        }
+        CGContextRestoreGState(c);    }
 }
 
 @end

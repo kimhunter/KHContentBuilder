@@ -59,7 +59,9 @@ static CGDataConsumerRef KHPDFMaker_dataConsumerCreate
 {
     
     KHPDFHotspot *hs = [KHPDFHotspot hotspotWithString:@"this is my test" withRect:CGRectMake(20.0, 20.0, 70.0, 70.0) onPage:1];
-    NSData *pdfData = [self buildPdfWithSize:CGSizeMake(100, 100) pages:3 andHotspots:@[hs]];
+    KHPDFHotspot *hs1 = [KHPDFHotspot hotspotWithString:@"this is my test" withRect:CGRectMake(20.0, 20.0, 70.0, 20.0) onPage:2];
+
+    NSData *pdfData = [self buildPdfWithSize:CGSizeMake(100, 100) pages:3 andHotspots:@[hs, hs1]];
     [pdfData writeToFile:@"/Users/kim/Desktop/Test.pdf" atomically:YES];
 }
 
@@ -79,12 +81,15 @@ static CGDataConsumerRef KHPDFMaker_dataConsumerCreate
         NSArray *pageHotspots = [hotspots filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"page = %d", i]];
         
         CGPDFContextBeginPage(pdfContext, NULL);
+//        CGContextTranslateCTM(pdfContext, 0.0, mediaBox.size.width);
+//        CGContextScaleCTM(pdfContext, 1.0, -1.0);
+
         CGContextSetFillColorWithColor(pdfContext, [[UIColor redColor] CGColor]);
 //        CGContextFillRect(pdfContext, CGRectInset(mediaBox, 20, 20));
         
         for (KHPDFHotspot *hotspot in pageHotspots)
         {
-            [hotspot addToContext:pdfContext];
+            [hotspot addToContext:pdfContext withPageSize:mediaBox.size];
         }
         
         CGPDFContextEndPage(pdfContext);

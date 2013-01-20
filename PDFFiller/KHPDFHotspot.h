@@ -13,9 +13,10 @@
 @property (assign, nonatomic) NSInteger page;
 @property (retain, nonatomic) NSString *urlString;
 @property (assign, nonatomic) BOOL shouldEscapeAndAddHttpIfMissing;
+@property (retain, nonatomic) UIColor *fillWithColor;
 
 
-- (void)addToContext:(CGContextRef)c;
+- (void)addToContext:(CGContextRef)c withPageSize:(CGSize)pageSize;
 + (id)hotspotWithString:(NSString *)urlString withRect:(CGRect)hsRect onPage:(NSInteger)page;
 
 @end
