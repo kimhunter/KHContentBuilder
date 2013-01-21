@@ -48,7 +48,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     self = [super init];
     if (self)
 	{
-        self.contentTypeMap = [NSMutableDictionary dictionary];
+        self.contentTypeMap  = [NSMutableDictionary dictionary];
         self.contentClassMap = [NSMutableDictionary dictionary];
         self.fm = [[[NSFileManager alloc] init] autorelease];
 
