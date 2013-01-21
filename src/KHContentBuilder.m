@@ -209,7 +209,7 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
         [outputStream open];
         result =[NSPropertyListSerialization writePropertyList:info[0]
                                                       toStream:outputStream
-                                                        format:NSPropertyListBinaryFormat_v1_0
+                                                        format:plFormat
                                                        options:nil
                                                          error:NULL];
         [outputStream close];
