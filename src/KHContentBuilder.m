@@ -21,8 +21,8 @@ NSString *const kKHContentTypePNG = @"kKHContentTypeJpeg";
 NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 
 @interface KHContentBuilder ()
-@property (nonatomic, retain) NSDictionary *contentTypeMap;
-@property (nonatomic, retain) NSDictionary *contentClassMap;
+@property (nonatomic, retain) NSMutableDictionary *contentTypeMap;
+@property (nonatomic, retain) NSMutableDictionary *contentClassMap;
 @property (nonatomic, retain) KHPDFMaker *pdfMaker;
 @end
 
@@ -43,13 +43,13 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     if (self)
 	{
         
-        self.contentClassMap = @{ // add here when the type is supported
+        self.contentClassMap = [[@{ // add here when the type is supported
                                  kKHContentTypePDF : [KHPDFContent class],
                                  kKHContentTypeText: [KHTextContent class],
                                  kKHContentTypeDir : [KHDirContent class],
-                                };
+                                } mutableCopy] autorelease];
         
-        self.contentTypeMap = @{
+        self.contentTypeMap = [[@{
                                 @"pdf" : kKHContentTypePDF,
                                 @"txt" : kKHContentTypeText,
                                 @"html": kKHContentTypeText,
@@ -60,7 +60,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
                                 @"png" : kKHContentTypePNG,
                                 @"jpg" : kKHContentTypeJpeg,
                                 @"jpeg": kKHContentTypeJpeg,
-                                };
+                                } mutableCopy] autorelease];
         
         _pdfMaker = [[KHPDFMaker alloc] init];
 		_fm = [[NSFileManager alloc] init];
@@ -91,6 +91,12 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 {
     //TODO: Add error logging
 	[_fm createDirectoryAtPath:self.basePath withIntermediateDirectories:YES attributes:nil error:NULL];
+}
+
+- (void)addContentHandlerForExtension:(NSString *)ext withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
+{
+    self.contentClassMap[typeKey] = cls;
+    self.contentTypeMap[ext] = typeKey;
 }
 
 - (NSString *)fullPathForRelPath:(NSString *)relPath
