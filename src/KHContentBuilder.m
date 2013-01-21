@@ -34,14 +34,14 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 
 - (id)initWithBasePath:(NSString *)path
 {
-    if ([self init])
+    self = [self init];
+    if (self)
     {
         self.basePath = path;
         [self createBasePath];
     }
     return self;
 }
-
 
 - (id)init
 {
@@ -56,6 +56,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
         [self addContentHandlerForExtensions:@[@"pdf"] withClass:[KHPDFContent class] withTypeKey:kKHContentTypePDF];
         [self addContentHandlerForExtensions:@[@"png"] withClass:[KHPNGContent class] withTypeKey:kKHContentTypePNG];
         [self addContentHandlerForExtensions:@[@"jpg",@"jpeg"] withClass:[KHJpegContent class] withTypeKey:kKHContentTypeJpeg];
+        
         [self addContentHandlerForExtensions:@[@"txt", @"html", @"htm", @"css", @"url",]
                                    withClass:[KHTextContent class]
                                  withTypeKey:kKHContentTypeText];
