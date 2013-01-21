@@ -35,6 +35,11 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
     [super dealloc];
 }
 
+- (id)initWithUniqueTmpBasePath
+{
+    return self = [self initWithBasePath:[NSTemporaryDirectory() stringByAppendingPathComponent:[[self class] uniqueKey]]];
+}
+
 - (id)initWithBasePath:(NSString *)path
 {
     self = [self init];

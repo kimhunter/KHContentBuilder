@@ -27,6 +27,7 @@ extern NSString *const kKHContentTypeDir;
 @property (retain) NSString *basePath;
 
 - (id)initWithBasePath:(NSString *)path;
+- (id)initWithUniqueTmpBasePath;
 - (NSString *)fullPathForRelPath:(NSString *)relPath;
 
 - (void)addContentHandlerForExtensions:(NSArray *)extensions withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
