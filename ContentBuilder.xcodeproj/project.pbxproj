@@ -131,6 +131,7 @@
 				3BAB501616AD5B26004B0A6F /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		3BAB501616AD5B26004B0A6F /* Products */ = {
 			isa = PBXGroup;
