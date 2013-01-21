@@ -48,39 +48,20 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     self = [super init];
     if (self)
 	{
-        _contentTypeMap = [[self builtinTypeMap] mutableCopy];
-        _contentClassMap = [[self builtinClassMap] mutableCopy];
-		_fm = [[NSFileManager alloc] init];
+        self.contentTypeMap = [NSMutableDictionary dictionary];
+        self.contentClassMap = [NSMutableDictionary dictionary];
+        self.fm = [[[NSFileManager alloc] init] autorelease];
+
+        [self addContentHandlerForExtensions:nil withClass:[KHDirContent class] withTypeKey:kKHContentTypeDir];
+        [self addContentHandlerForExtensions:@[@"pdf"] withClass:[KHPDFContent class] withTypeKey:kKHContentTypePDF];
+        [self addContentHandlerForExtensions:@[@"png"] withClass:[KHPNGContent class] withTypeKey:kKHContentTypePNG];
+        [self addContentHandlerForExtensions:@[@"jpg",@"jpeg"] withClass:[KHJpegContent class] withTypeKey:kKHContentTypeJpeg];
+        [self addContentHandlerForExtensions:@[@"txt", @"html", @"htm", @"css", @"url",]
+                                   withClass:[KHTextContent class]
+                                 withTypeKey:kKHContentTypeText];
     }
     return self;
 }
-
-- (NSDictionary *)builtinTypeMap
-{
-    return @{
-             @"pdf" : kKHContentTypePDF,
-             @"txt" : kKHContentTypeText,
-             @"html": kKHContentTypeText,
-             @"htm" : kKHContentTypeText,
-             @"css" : kKHContentTypeText,
-             @"url" : kKHContentTypeText,
-             @"png" : kKHContentTypePNG,
-             @"jpg" : kKHContentTypeJpeg,
-             @"jpeg": kKHContentTypeJpeg,
-            };
-}
-
-- (NSDictionary *)builtinClassMap
-{
-    return @{ // add here when the type is supported
-             kKHContentTypePDF : [KHPDFContent class],
-             kKHContentTypeText: [KHTextContent class],
-             kKHContentTypeDir : [KHDirContent class],
-             kKHContentTypePNG : [KHPNGContent class],
-             kKHContentTypeJpeg: [KHJpegContent class],
-            };
-}
-
 
 - (void)createBasePath
 {
