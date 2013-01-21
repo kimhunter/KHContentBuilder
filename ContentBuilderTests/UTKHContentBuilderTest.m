@@ -95,12 +95,14 @@
 
 - (void)testUseBlock
 {
-	[_cb addContentHandlerForExtensions:@[@"txt"] withBlock:^BOOL(NSString *fileName, NSArray *info) {
-		return [(NSString *)info[0] writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:NULL];
-	}];
-	
-	[_cb buildContent:@{@"fileName.txt": KHTextContentInfoMake(@"Testing")}];
-	KHAssertFileExists([_cb fullPathForRelPath:@"fileName.txt"]);
+    [_cb addContentHandlerForExtensions:@[@"txt", @"rnd"] withBlock:^BOOL(NSString *fileName, NSArray *info) {
+        return [(NSString *)info[0] writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    }];
+    [_cb buildContent:@{@"fileName.txt": KHTextContentInfoMake(@"Testing"),
+                        @"fileName.rnd": KHTextContentInfoMake(@"Testing2")}];
+    
+    KHAssertFileExists([_cb fullPathForRelPath:@"fileName.txt"]);
+    KHAssertFileExists([_cb fullPathForRelPath:@"fileName.rnd"]);
 	
 }
 
