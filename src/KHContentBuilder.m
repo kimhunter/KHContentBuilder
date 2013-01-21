@@ -37,46 +37,6 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     [super dealloc];
 }
 
-- (id)init
-{
-    self = [super init];
-    if (self)
-	{
-        
-        self.contentClassMap = [[@{ // add here when the type is supported
-                                 kKHContentTypePDF : [KHPDFContent class],
-                                 kKHContentTypeText: [KHTextContent class],
-                                 kKHContentTypeDir : [KHDirContent class],
-                                } mutableCopy] autorelease];
-        
-        self.contentTypeMap = [[@{
-                                @"pdf" : kKHContentTypePDF,
-                                @"txt" : kKHContentTypeText,
-                                @"html": kKHContentTypeText,
-                                @"htm" : kKHContentTypeText,
-                                @"css" : kKHContentTypeText,
-                                @"url" : kKHContentTypeText,
-                                // below not supported yet
-                                @"png" : kKHContentTypePNG,
-                                @"jpg" : kKHContentTypeJpeg,
-                                @"jpeg": kKHContentTypeJpeg,
-                                } mutableCopy] autorelease];
-        
-        _pdfMaker = [[KHPDFMaker alloc] init];
-		_fm = [[NSFileManager alloc] init];
-    }
-    return self;
-}
-
-+ (NSString *)uniqueKey
-{
-	CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
-	CFStringRef stringRef = CFUUIDCreateString(kCFAllocatorDefault, uuidRef);
-	CFRelease(uuidRef);
-	NSString *uuid = (NSString *)stringRef;
-	return [uuid autorelease];
-}
-
 - (id)initWithBasePath:(NSString *)path
 {
     if ([self init])
@@ -87,21 +47,50 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     return self;
 }
 
+
+- (id)init
+{
+    self = [super init];
+    if (self)
+	{
+        _contentTypeMap = [[self builtinTypeMap] mutableCopy];
+        _contentClassMap = [[self builtinClassMap] mutableCopy];
+		_fm = [[NSFileManager alloc] init];
+    }
+    return self;
+}
+
+- (NSDictionary *)builtinTypeMap
+{
+    return @{
+             @"pdf" : kKHContentTypePDF,
+             @"txt" : kKHContentTypeText,
+             @"html": kKHContentTypeText,
+             @"htm" : kKHContentTypeText,
+             @"css" : kKHContentTypeText,
+             @"url" : kKHContentTypeText,
+
+             // below not supported yet
+             @"png" : kKHContentTypePNG,
+             @"jpg" : kKHContentTypeJpeg,
+             @"jpeg": kKHContentTypeJpeg,
+            };
+}
+
+- (NSDictionary *)builtinClassMap
+{
+    return @{ // add here when the type is supported
+             kKHContentTypePDF : [KHPDFContent class],
+             kKHContentTypeText: [KHTextContent class],
+             kKHContentTypeDir : [KHDirContent class],
+            };
+}
+
+
 - (void)createBasePath
 {
     //TODO: Add error logging
 	[_fm createDirectoryAtPath:self.basePath withIntermediateDirectories:YES attributes:nil error:NULL];
-}
-
-- (void)addContentHandlerForExtension:(NSString *)ext withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
-{
-    self.contentClassMap[typeKey] = cls;
-    self.contentTypeMap[ext] = typeKey;
-}
-
-- (NSString *)fullPathForRelPath:(NSString *)relPath
-{
-    return [self.basePath stringByAppendingPathComponent:relPath];
 }
 
 - (NSString *)contentTypeForFileName:(NSString *)path
@@ -115,6 +104,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     return self.contentTypeMap[ext];
 }
 
+// return the content object fo ra particular path
 - (id<KHContent>)contentForPath:(NSString *)path withInfo:(NSArray *)info
 {
     NSString *contentType = [self contentTypeForFileName:path];
@@ -125,6 +115,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     return nil;
 }
 
+// Write content object to disk
 - (void)makeContentFile:(NSString *)filePath withArrayInfo:(NSArray *)info
 {
     id<KHContent> content = [self contentForPath:filePath withInfo:info];
@@ -143,6 +134,17 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 
 }
 
+- (KHPDFMaker *)pdfMaker
+{
+    if (_pdfMaker == nil)
+    {
+        _pdfMaker = [[KHPDFMaker alloc] init];
+    }
+    return _pdfMaker;
+}
+
+#pragma mark - Public Methods
+
 - (void)buildContent:(NSDictionary *)fileDict
 {
     for (NSString *key in [fileDict allKeys])
@@ -151,6 +153,28 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
         NSArray *info = fileDict[key];
         [self makeContentFile:file withArrayInfo:info];
     }
+}
+
+- (NSString *)fullPathForRelPath:(NSString *)relPath
+{
+    return [self.basePath stringByAppendingPathComponent:relPath];
+}
+
+- (void)addContentHandlerForExtension:(NSString *)ext withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
+{
+    self.contentClassMap[typeKey] = cls;
+    self.contentTypeMap[[ext lowercaseString]] = typeKey;
+}
+
+
+#pragma mark - Class Methods
++ (NSString *)uniqueKey
+{
+	CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+	CFStringRef stringRef = CFUUIDCreateString(kCFAllocatorDefault, uuidRef);
+	CFRelease(uuidRef);
+	NSString *uuid = (NSString *)stringRef;
+	return [uuid autorelease];
 }
 
 @end
