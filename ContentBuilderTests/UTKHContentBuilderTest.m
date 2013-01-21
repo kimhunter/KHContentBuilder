@@ -23,8 +23,7 @@
     {
         self.fm = [[NSFileManager new] autorelease];
     }
-    NSString *basePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[KHContentBuilder uniqueKey]];
-    self.cb = [[KHContentBuilder alloc] initWithBasePath:basePath];
+    self.cb = [[[KHContentBuilder alloc] initWithUniqueTmpBasePath] autorelease];
     self.contentDict = nil;
 }
 
