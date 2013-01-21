@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'PDFFiller' target in the 'PDFFiller' project
+// Prefix header for all source files of the 'ContentBuilder' target in the 'ContentBuilder' project
 //
 
 #import <Availability.h>
