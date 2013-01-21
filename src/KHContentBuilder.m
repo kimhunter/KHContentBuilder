@@ -64,8 +64,6 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
              @"htm" : kKHContentTypeText,
              @"css" : kKHContentTypeText,
              @"url" : kKHContentTypeText,
-
-             // below not supported yet
              @"png" : kKHContentTypePNG,
              @"jpg" : kKHContentTypeJpeg,
              @"jpeg": kKHContentTypeJpeg,
@@ -78,6 +76,8 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
              kKHContentTypePDF : [KHPDFContent class],
              kKHContentTypeText: [KHTextContent class],
              kKHContentTypeDir : [KHDirContent class],
+             kKHContentTypePNG : [KHPNGContent class],
+             kKHContentTypeJpeg: [KHJpegContent class],
             };
 }
 

@@ -62,6 +62,14 @@
     STAssertEqualObjects(fileContent, content, @"Content should be the same as we put in");
 }
 
+- (void)testBuildImage
+{
+    [_cb buildContent:@{@"one-png.png": KHImageContentInfo(CGSizeMake(50, 50), [UIColor blueColor]),
+                        @"one-jpg.jpg": KHImageContentInfo(CGSizeMake(50, 50), [UIColor blueColor])}];
+    
+    KHAssertFileExists([_cb fullPathForRelPath:@"one-jpg.jpg"]);
+    KHAssertFileExists([_cb fullPathForRelPath:@"one-png.png"]);
+}
 
 - (void)testBuildDir
 {
