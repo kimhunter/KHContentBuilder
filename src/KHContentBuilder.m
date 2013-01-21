@@ -155,10 +155,13 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     return [self.basePath stringByAppendingPathComponent:relPath];
 }
 
-- (void)addContentHandlerForExtension:(NSString *)ext withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
+- (void)addContentHandlerForExtensions:(NSArray *)extensions withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey
 {
     self.contentClassMap[typeKey] = cls;
-    self.contentTypeMap[[ext lowercaseString]] = typeKey;
+    for (NSString *ext in extensions)
+    {
+        self.contentTypeMap[[ext lowercaseString]] = typeKey;
+    }
 }
 
 

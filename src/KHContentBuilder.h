@@ -29,7 +29,7 @@ extern NSString *const kKHContentTypeDir;
 - (id)initWithBasePath:(NSString *)path;
 - (NSString *)fullPathForRelPath:(NSString *)relPath;
 
-- (void)addContentHandlerForExtension:(NSString *)ext withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
+- (void)addContentHandlerForExtensions:(NSArray *)extensions withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
 
 /** build a directory structure with the given dictionary
     @param fileDict dictionary of key(NSString)/values(NSArray)

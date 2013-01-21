@@ -30,9 +30,9 @@ Just implement 2 methods and you can have a custom content writer
 
 Your class must adopt the `<KHContent>` protocol
 	
-    - (void)addContentHandlerForExtension:(NSString *)ext withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
+    - (void)addContentHandlerForExtensions:(NSArray *)extensions withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
 
-    [contentBuilder addContentHandlerForExtension:@"gif" withClass:[CustomGifContent class] withTypeKey:@"gifContentKey"];
+    [contentBuilder addContentHandlerForExtensions:@[@"gif"] withClass:[CustomGifContent class] withTypeKey:@"gifContentKey"];
     [contentBuilder buildContent:@{ @"gif" : @[/*some info here that your class will know how to create*/] }];
 
 
