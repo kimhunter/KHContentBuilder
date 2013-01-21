@@ -16,11 +16,6 @@
     return [[[self class] new] autorelease];
 }
 
-- (NSData *)dataForContent
-{
-    return nil;
-}
-
 - (NSString *)contentType
 {
     return kKHContentTypeDir;

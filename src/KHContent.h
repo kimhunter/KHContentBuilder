@@ -12,12 +12,16 @@
 @protocol KHContent <NSObject>
 @required
 
+/** returns an instance of your class based on the given meta data */
 + (id)contentWithArray:(NSArray *)array;
 
-- (NSString *)contentType;
+/** write the file out to this file name */
 - (BOOL)writeToFile:(NSString *)fileName;
-- (NSData *)dataForContent;
+
 
 @optional
+// only used by builtin pdftype so you can customize pdf info (coming)
 - (void)setPdfMaker:(KHPDFMaker *)pdfMaker;
+
+- (NSString *)contentType;
 @end

@@ -39,11 +39,6 @@ NSArray *KHTextContentInfoMake(NSString *content)
     return YES;
 }
 
-- (NSData *)dataForContent
-{
-    return [NSData dataWithBytes:[self.content UTF8String] length:self.content.length];
-}
-
 - (NSString *)contentType
 {
     return kKHContentTypeText;
