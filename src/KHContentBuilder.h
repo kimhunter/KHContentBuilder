@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "KHContent.h"
+#import "KHDirContent.h"
+#import "KHPDFHotspot.h"
+#import "KHTextContent.h"
+#import "KHPDFContent.h"
+#import "KHPNGContent.h"
+#import "KHJpegContent.h"
 
 extern NSString *const kKHContentTypePDF;
 extern NSString *const kKHContentTypeText;

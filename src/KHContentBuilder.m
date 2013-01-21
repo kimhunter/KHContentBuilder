@@ -8,11 +8,6 @@
 
 #import "KHContentBuilder.h"
 #import "KHPDFMaker.h"
-#import "KHContent.h"
-#import "KHPDFContent.h"
-#import "KHTextContent.h"
-#import "KHDirContent.h"
-
 
 NSString *const kKHContentTypePDF = @"kKHContentTypePDF";
 NSString *const kKHContentTypeText = @"kKHContentTypeText";

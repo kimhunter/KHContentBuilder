@@ -8,9 +8,6 @@
 
 #import "UTKHContentBuilderTest.h"
 #import "KHContentBuilder.h"
-#import "KHPDFHotspot.h"
-#import "KHTextContent.h"
-#import "KHPDFContent.h"
 
 @interface UTKHContentBuilderTest ()
 @property (retain) KHContentBuilder *cb;
