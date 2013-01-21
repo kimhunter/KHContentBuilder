@@ -156,12 +156,10 @@ NSString *const kKHContentBlock    = @"kKHContentBlock";
 
 - (void)buildContent:(NSDictionary *)fileDict
 {
-    for (NSString *key in [fileDict allKeys])
-    {
-        NSString *file = key;
-        NSArray *info = fileDict[key];
-        [self makeContentFile:file withArrayInfo:info];
-    }
+    __block KHContentBuilder *blockSelf = self;
+    [fileDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [blockSelf makeContentFile:(NSString *)key withArrayInfo:(NSArray *)obj];
+    }];
 }
 
 - (NSString *)fullPathForRelPath:(NSString *)relPath
