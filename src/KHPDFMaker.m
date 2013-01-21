@@ -13,16 +13,6 @@
 
 @implementation KHPDFMaker
 
-- (void)build
-{
-    
-    KHPDFHotspot *hs = [KHPDFHotspot hotspotWithString:@"this is my test" withRect:CGRectMake(20.0, 20.0, 70.0, 70.0) onPage:1];
-    KHPDFHotspot *hs1 = [KHPDFHotspot hotspotWithString:@"this is my test" withRect:CGRectMake(20.0, 20.0, 70.0, 20.0) onPage:2];
-
-    NSData *pdfData = [self buildPDFWithSize:CGSizeMake(100, 100) pages:3 andHotspots:@[hs, hs1]];
-    [pdfData writeToFile:@"/Users/kim/Desktop/Test.pdf" atomically:YES];
-}
-
 - (NSData *)buildPDFWithSize:(CGSize)defaultSize pages:(NSInteger)pageCount andHotspots:(NSArray *)hotspots
 {
     CGRect mediaBox = CGRectZero;

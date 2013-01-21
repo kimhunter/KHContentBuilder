@@ -9,6 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface KHPDFMaker : NSObject
-- (void)build;
 - (NSData *)buildPDFWithSize:(CGSize)defaultSize pages:(NSInteger)pageCount andHotspots:(NSArray *)hotspots;
 @end
