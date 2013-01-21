@@ -218,7 +218,6 @@ NSString *const kKHContentBlock    = @"kKHContentBlock";
         [outputStream close];
         return result != 0;
     }];
-    
 }
 
 #pragma mark - Class Methods
@@ -232,3 +231,14 @@ NSString *const kKHContentBlock    = @"kKHContentBlock";
 }
 
 @end
+
+NSArray *KHPlistContentInfo(id plistObject, NSPropertyListFormat fmt)
+{
+    return @[plistObject, @(fmt)];
+}
+
+NSArray *KHJsonContentInfo(id plistObject)
+{
+    return @[plistObject];
+}
+

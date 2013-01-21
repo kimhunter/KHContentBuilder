@@ -21,6 +21,11 @@ extern NSString *const kKHContentTypeJPG;
 extern NSString *const kKHContentTypePNG;
 extern NSString *const kKHContentTypeDir;
 
+/* Info Helpers */
+NSArray *KHPlistContentInfo(id plistObject, NSPropertyListFormat fmt);
+NSArray *KHJsonContentInfo(id plistObject);
+
+
 //TODO: Add appledoc style comments to this class
 
 @interface KHContentBuilder : NSObject
