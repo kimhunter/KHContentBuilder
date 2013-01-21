@@ -9,12 +9,12 @@
 #import "KHContentBuilder.h"
 #import "KHPDFMaker.h"
 
-NSString *const kKHContentTypePDF = @"kKHContentTypePDF";
+NSString *const kKHContentTypePDF  = @"kKHContentTypePDF";
 NSString *const kKHContentTypeText = @"kKHContentTypeText";
-NSString *const kKHContentTypeJPG = @"kKHContentTypeJPG";
-NSString *const kKHContentTypePNG = @"kKHContentTypePNG";
-NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
-NSString *const kKHContentBlock   = @"kKHContentBlock";
+NSString *const kKHContentTypeJPG  = @"kKHContentTypeJPG";
+NSString *const kKHContentTypePNG  = @"kKHContentTypePNG";
+NSString *const kKHContentTypeDir  = @"kKHContentTypeDir";
+NSString *const kKHContentBlock    = @"kKHContentBlock";
 
 @interface KHContentBuilder ()
 @property (nonatomic, retain) NSMutableDictionary *contentTypeMap;
