@@ -62,7 +62,7 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
         [self addContentHandlerForExtensions:@[@"png"] withClass:[KHPNGContent class] withTypeKey:kKHContentTypePNG];
         [self addContentHandlerForExtensions:@[@"jpg",@"jpeg"] withClass:[KHJPGContent class] withTypeKey:kKHContentTypeJPG];
         
-        [self addContentHandlerForExtensions:@[@"txt", @"html", @"htm", @"css", @"url",]
+        [self addContentHandlerForExtensions:@[@"txt", @"html", @"htm", @"css", @"url"]
                                    withClass:[KHTextContent class]
                                  withTypeKey:kKHContentTypeText];
     }
