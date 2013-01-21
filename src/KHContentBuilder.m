@@ -138,7 +138,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 {
     if (_pdfMaker == nil)
     {
-        _pdfMaker = [[KHPDFMaker alloc] init];
+        self.pdfMaker = [[[KHPDFMaker alloc] init] autorelease];
     }
     return _pdfMaker;
 }
