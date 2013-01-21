@@ -200,9 +200,21 @@
 		3BBAC1E216AD5B88009EE295 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				3BBAC20C16AD5E38009EE295 /* Writers */,
 				3BBAC1E316AD5B88009EE295 /* KHContent.h */,
 				3BBAC1E416AD5B88009EE295 /* KHContentBuilder.h */,
 				3BBAC1E516AD5B88009EE295 /* KHContentBuilder.m */,
+				3BBAC1EE16AD5B88009EE295 /* KHPDFHotspot.h */,
+				3BBAC1EF16AD5B88009EE295 /* KHPDFHotspot.m */,
+				3BBAC1F016AD5B88009EE295 /* KHPDFMaker.h */,
+				3BBAC1F116AD5B88009EE295 /* KHPDFMaker.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		3BBAC20C16AD5E38009EE295 /* Writers */ = {
+			isa = PBXGroup;
+			children = (
 				3BBAC1E616AD5B88009EE295 /* KHDirContent.h */,
 				3BBAC1E716AD5B88009EE295 /* KHDirContent.m */,
 				3BBAC1E816AD5B88009EE295 /* KHImageContent.h */,
@@ -211,16 +223,12 @@
 				3BBAC1EB16AD5B88009EE295 /* KHJPGContent.m */,
 				3BBAC1EC16AD5B88009EE295 /* KHPDFContent.h */,
 				3BBAC1ED16AD5B88009EE295 /* KHPDFContent.m */,
-				3BBAC1EE16AD5B88009EE295 /* KHPDFHotspot.h */,
-				3BBAC1EF16AD5B88009EE295 /* KHPDFHotspot.m */,
-				3BBAC1F016AD5B88009EE295 /* KHPDFMaker.h */,
-				3BBAC1F116AD5B88009EE295 /* KHPDFMaker.m */,
 				3BBAC1F216AD5B88009EE295 /* KHPNGContent.h */,
 				3BBAC1F316AD5B88009EE295 /* KHPNGContent.m */,
 				3BBAC1F416AD5B88009EE295 /* KHTextContent.h */,
 				3BBAC1F516AD5B88009EE295 /* KHTextContent.m */,
 			);
-			path = src;
+			name = Writers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
