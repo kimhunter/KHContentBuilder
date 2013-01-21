@@ -14,10 +14,12 @@ NSString *const kKHContentTypeText = @"kKHContentTypeText";
 NSString *const kKHContentTypeJPG = @"kKHContentTypeJPG";
 NSString *const kKHContentTypePNG = @"kKHContentTypePNG";
 NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
+NSString *const kKHContentBlock   = @"kKHContentBlock";
 
 @interface KHContentBuilder ()
 @property (nonatomic, retain) NSMutableDictionary *contentTypeMap;
 @property (nonatomic, retain) NSMutableDictionary *contentClassMap;
+@property (nonatomic, retain) NSMutableDictionary *contentBlockMap;
 @property (nonatomic, retain) KHPDFMaker *pdfMaker;
 @end
 
@@ -29,6 +31,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     self.pdfMaker = nil;
     self.contentTypeMap = nil;
     self.contentClassMap = nil;
+    self.contentBlockMap = nil;
     [super dealloc];
 }
 
@@ -50,6 +53,8 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 	{
         self.contentTypeMap  = [NSMutableDictionary dictionary];
         self.contentClassMap = [NSMutableDictionary dictionary];
+        self.contentBlockMap = [NSMutableDictionary dictionary];
+		
         self.fm = [[[NSFileManager alloc] init] autorelease];
 
         [self addContentHandlerForExtensions:nil withClass:[KHDirContent class] withTypeKey:kKHContentTypeDir];
@@ -92,6 +97,12 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
     return nil;
 }
 
+- (BOOL)canMakeWithBlock:(NSString *)filePath
+{
+    BOOL isBlockType = [[self contentTypeForFileName:filePath] isEqualToString:kKHContentBlock];
+    return isBlockType;
+}
+
 // Write content object to disk
 - (void)makeContentFile:(NSString *)filePath withArrayInfo:(NSArray *)info
 {
@@ -107,8 +118,19 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
    withIntermediateDirectories:YES
                     attributes:nil
                          error:NULL];
-    [content writeToFile:fullPath];
-
+    
+    if (content == nil && [self canMakeWithBlock:filePath])
+    {
+        BOOL (^contentBlock)(NSString *,NSArray *) = self.contentBlockMap[filePath.pathExtension.lowercaseString];
+        if (contentBlock)
+        {
+            contentBlock(fullPath, info);
+        }
+    }
+    else
+    {
+        [content writeToFile:fullPath];
+    }
 }
 
 - (KHPDFMaker *)pdfMaker
@@ -135,6 +157,15 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 - (NSString *)fullPathForRelPath:(NSString *)relPath
 {
     return [self.basePath stringByAppendingPathComponent:relPath];
+}
+
+- (void)addContentHandlerForExtensions:(NSArray *)extensions withBlock:(BOOL(^)(NSString *fileName, NSArray *info))block
+{
+    for (NSString *ext in extensions)
+    {
+        self.contentTypeMap[[ext lowercaseString]] = kKHContentBlock;
+        self.contentBlockMap[[ext lowercaseString]] = block;
+    }
 }
 
 - (void)addContentHandlerForExtensions:(NSArray *)extensions withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey

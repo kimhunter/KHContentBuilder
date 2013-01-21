@@ -30,7 +30,7 @@ extern NSString *const kKHContentTypeDir;
 - (NSString *)fullPathForRelPath:(NSString *)relPath;
 
 - (void)addContentHandlerForExtensions:(NSArray *)extensions withClass:(Class<KHContent>)cls withTypeKey:(NSString *)typeKey;
-
+- (void)addContentHandlerForExtensions:(NSArray *)extensions withBlock:(BOOL(^)(NSString *fileName, NSArray *info))block;
 /** build a directory structure with the given dictionary
     @param fileDict dictionary of key(NSString)/values(NSArray)
                     The key should is a path relative to the basePath

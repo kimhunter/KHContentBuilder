@@ -93,4 +93,15 @@
     KHAssertFileExists([_cb fullPathForRelPath:@"30-Wow/P1-1.pdf"]);
 }
 
+- (void)testUseBlock
+{
+	[_cb addContentHandlerForExtensions:@[@"txt"] withBlock:^BOOL(NSString *fileName, NSArray *info) {
+		return [(NSString *)info[0] writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+	}];
+	
+	[_cb buildContent:@{@"fileName.txt": KHTextContentInfoMake(@"Testing")}];
+	KHAssertFileExists([_cb fullPathForRelPath:@"fileName.txt"]);
+	
+}
+
 @end
