@@ -65,6 +65,7 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
         [self addContentHandlerForExtensions:@[@"txt", @"html", @"htm", @"css", @"url"]
                                    withClass:[KHTextContent class]
                                  withTypeKey:kKHContentTypeText];
+        [self addCustomBlockTypes]; //json
     }
     return self;
 }
@@ -177,6 +178,40 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
     }
 }
 
+#pragma mark - Builtin Block Content Types
+- (void)addCustomBlockTypes
+{
+    [self addContentHandlerForExtensions:@[@"json"] withBlock:^BOOL(NSString *fileName, NSArray *info) {
+        NSInteger result = 0;
+        NSOutputStream *outputStream = [NSOutputStream outputStreamToFileAtPath:fileName append:NO];
+        [outputStream open];
+        result = [NSJSONSerialization writeJSONObject:info[0]
+                                             toStream:outputStream
+                                              options:NSJSONWritingPrettyPrinted
+                                                error:NULL];
+        [outputStream close];
+        return result != 0;
+    }];
+    
+    [self addContentHandlerForExtensions:@[@"plist"] withBlock:^BOOL(NSString *fileName, NSArray *info) {
+        NSInteger result = 0;
+        NSPropertyListFormat plFormat = NSPropertyListXMLFormat_v1_0;
+        if ([info count] > 1)
+        {
+            plFormat = [(NSNumber *)info[1] unsignedIntegerValue];
+        }
+        NSOutputStream *outputStream = [NSOutputStream outputStreamToFileAtPath:fileName append:NO];
+        [outputStream open];
+        result =[NSPropertyListSerialization writePropertyList:info[0]
+                                                      toStream:outputStream
+                                                        format:NSPropertyListBinaryFormat_v1_0
+                                                       options:nil
+                                                         error:NULL];
+        [outputStream close];
+        return result != 0;
+    }];
+    
+}
 
 #pragma mark - Class Methods
 + (NSString *)uniqueKey

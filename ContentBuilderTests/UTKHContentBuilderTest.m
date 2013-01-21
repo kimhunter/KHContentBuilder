@@ -98,12 +98,19 @@
     [_cb addContentHandlerForExtensions:@[@"txt", @"rnd"] withBlock:^BOOL(NSString *fileName, NSArray *info) {
         return [(NSString *)info[0] writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:NULL];
     }];
+    
     [_cb buildContent:@{@"fileName.txt": KHTextContentInfoMake(@"Testing"),
-                        @"fileName.rnd": KHTextContentInfoMake(@"Testing2")}];
+                        @"fileName.rnd": KHTextContentInfoMake(@"Testing2"),
+                        @"fileName.plist": @[@{@"test":@44444}], // built-in
+                        @"ab.json":@[@{@"bbb": @4444}],          // built-in
+    }];
     
     KHAssertFileExists([_cb fullPathForRelPath:@"fileName.txt"]);
     KHAssertFileExists([_cb fullPathForRelPath:@"fileName.rnd"]);
-	
+    KHAssertFileExists([_cb fullPathForRelPath:@"fileName.plist"]);
+    KHAssertFileExists([_cb fullPathForRelPath:@"ab.json"]);
+    
+
 }
 
 @end

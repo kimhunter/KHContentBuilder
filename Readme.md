@@ -13,7 +13,7 @@ It's extendable, so you can create your own Content writers.
     
 
 ###Extend to write your own content types
-	
+
 Just implement 2 methods and you can have a custom content writer
 
 
@@ -21,12 +21,41 @@ Just implement 2 methods and you can have a custom content writer
     @required
     + (id)contentWithArray:(NSArray *)array;
     - (BOOL)writeToFile:(NSString *)fileName;
-    
+
     @optional
-		- (NSString *)contentType;
-		- (void)setPdfMaker:(KHPDFMaker *)pdfMaker;
-		@end
+    - (NSString *)contentType;
+    - (void)setPdfMaker:(KHPDFMaker *)pdfMaker;
+    @end
 	
+
+Or even easier use a block
+
+    [cb addContentHandlerForExtensions:@[@"plist"] withBlock:^BOOL(NSString *fileName, NSArray *info) {
+        return [(NSDictionary *)info[0] writeToFile:fileName atomically:YES];
+    }];
+    
+Or even an plist example that takes a format as well as the object `@[@{}, @(NSPropertyListXMLFormat_v1_0)]`
+
+    [cb addContentHandlerForExtensions:@[@"plist"] withBlock:^BOOL(NSString *fileName, NSArray *info) {
+        NSDictionary *d = info[0];
+        NSPropertyListFormat plFormat = NSPropertyListXMLFormat_v1_0;
+        
+        if ([info count] > 1)
+        {
+            plFormat = [(NSNumber *)info[1] unsignedIntegerValue];
+        }
+        
+        NSOutputStream *outputStream = [NSOutputStream outputStreamToFileAtPath:fileName append:NO];
+        [outputStream open];
+        [NSPropertyListSerialization writePropertyList:d 
+                                              toStream:outputStream 
+                                                format:NSPropertyListBinaryFormat_v1_0 
+                                               options:nil
+                                                 error:NULL];
+        [outputStream close];
+        return YES;
+    }];
+    
 
 Your class must adopt the `<KHContent>` protocol
 	
