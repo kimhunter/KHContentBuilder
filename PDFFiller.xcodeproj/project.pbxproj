@@ -34,6 +34,12 @@
 		3B4BAA7A16ABECBF00B9315A /* KHTextContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */; };
 		3B4BAA7B16ABECBF00B9315A /* KHTextContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */; };
 		3B4BAA8116ABED4300B9315A /* UTKHContentBuilderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BAA7F16ABED4300B9315A /* UTKHContentBuilderTest.m */; };
+		3BE6A44316AD443700EE1079 /* KHJpegContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6A44216AD443700EE1079 /* KHJpegContent.m */; };
+		3BE6A44416AD443700EE1079 /* KHJpegContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6A44216AD443700EE1079 /* KHJpegContent.m */; };
+		3BE6A44716AD478C00EE1079 /* KHImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6A44616AD478C00EE1079 /* KHImageContent.m */; };
+		3BE6A44816AD478C00EE1079 /* KHImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6A44616AD478C00EE1079 /* KHImageContent.m */; };
+		3BE6A44B16AD49BF00EE1079 /* KHPNGContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6A44A16AD49BF00EE1079 /* KHPNGContent.m */; };
+		3BE6A44C16AD49BF00EE1079 /* KHPNGContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6A44A16AD49BF00EE1079 /* KHPNGContent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,12 @@
 		3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHTextContent.m; sourceTree = "<group>"; };
 		3B4BAA7E16ABED4300B9315A /* UTKHContentBuilderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTKHContentBuilderTest.h; sourceTree = "<group>"; };
 		3B4BAA7F16ABED4300B9315A /* UTKHContentBuilderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTKHContentBuilderTest.m; sourceTree = "<group>"; };
+		3BE6A44116AD443700EE1079 /* KHJpegContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHJpegContent.h; sourceTree = "<group>"; };
+		3BE6A44216AD443700EE1079 /* KHJpegContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHJpegContent.m; sourceTree = "<group>"; };
+		3BE6A44516AD478C00EE1079 /* KHImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHImageContent.h; sourceTree = "<group>"; };
+		3BE6A44616AD478C00EE1079 /* KHImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHImageContent.m; sourceTree = "<group>"; };
+		3BE6A44916AD49BF00EE1079 /* KHPNGContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPNGContent.h; sourceTree = "<group>"; };
+		3BE6A44A16AD49BF00EE1079 /* KHPNGContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPNGContent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,21 +196,35 @@
 		3B4BAA6216ABECBF00B9315A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				3BE6A44016AD43C200EE1079 /* ContentWriters */,
 				3B4BAA6316ABECBF00B9315A /* KHContent.h */,
 				3B4BAA6416ABECBF00B9315A /* KHContentBuilder.h */,
 				3B4BAA6516ABECBF00B9315A /* KHContentBuilder.m */,
-				3B4BAA6616ABECBF00B9315A /* KHDirContent.h */,
-				3B4BAA6716ABECBF00B9315A /* KHDirContent.m */,
-				3B4BAA6816ABECBF00B9315A /* KHPDFContent.h */,
-				3B4BAA6916ABECBF00B9315A /* KHPDFContent.m */,
 				3B4BAA6A16ABECBF00B9315A /* KHPDFHotspot.h */,
 				3B4BAA6B16ABECBF00B9315A /* KHPDFHotspot.m */,
 				3B4BAA6C16ABECBF00B9315A /* KHPDFMaker.h */,
 				3B4BAA6D16ABECBF00B9315A /* KHPDFMaker.m */,
-				3B4BAA6E16ABECBF00B9315A /* KHTextContent.h */,
-				3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		3BE6A44016AD43C200EE1079 /* ContentWriters */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BAA6616ABECBF00B9315A /* KHDirContent.h */,
+				3B4BAA6716ABECBF00B9315A /* KHDirContent.m */,
+				3B4BAA6816ABECBF00B9315A /* KHPDFContent.h */,
+				3B4BAA6916ABECBF00B9315A /* KHPDFContent.m */,
+				3B4BAA6E16ABECBF00B9315A /* KHTextContent.h */,
+				3B4BAA6F16ABECBF00B9315A /* KHTextContent.m */,
+				3BE6A44516AD478C00EE1079 /* KHImageContent.h */,
+				3BE6A44616AD478C00EE1079 /* KHImageContent.m */,
+				3BE6A44116AD443700EE1079 /* KHJpegContent.h */,
+				3BE6A44216AD443700EE1079 /* KHJpegContent.m */,
+				3BE6A44916AD49BF00EE1079 /* KHPNGContent.h */,
+				3BE6A44A16AD49BF00EE1079 /* KHPNGContent.m */,
+			);
+			name = ContentWriters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +345,9 @@
 				3B4BAA7616ABECBF00B9315A /* KHPDFHotspot.m in Sources */,
 				3B4BAA7816ABECBF00B9315A /* KHPDFMaker.m in Sources */,
 				3B4BAA7A16ABECBF00B9315A /* KHTextContent.m in Sources */,
+				3BE6A44316AD443700EE1079 /* KHJpegContent.m in Sources */,
+				3BE6A44716AD478C00EE1079 /* KHImageContent.m in Sources */,
+				3BE6A44B16AD49BF00EE1079 /* KHPNGContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +362,9 @@
 				3B4BAA7916ABECBF00B9315A /* KHPDFMaker.m in Sources */,
 				3B4BAA7B16ABECBF00B9315A /* KHTextContent.m in Sources */,
 				3B4BAA8116ABED4300B9315A /* UTKHContentBuilderTest.m in Sources */,
+				3BE6A44416AD443700EE1079 /* KHJpegContent.m in Sources */,
+				3BE6A44816AD478C00EE1079 /* KHImageContent.m in Sources */,
+				3BE6A44C16AD49BF00EE1079 /* KHPNGContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
