@@ -27,6 +27,7 @@ extern NSString *const kKHContentTypeDir;
 
 @property (retain) NSFileManager *fm;
 @property (retain) NSString *basePath;
+@property (nonatomic, readonly) KHPDFMaker *pdfMaker;
 
 - (id)initWithBasePath:(NSString *)path;
 - (id)initWithUniqueTmpBasePath;
