@@ -35,22 +35,6 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
     [super dealloc];
 }
 
-- (id)initWithUniqueTmpBasePath
-{
-    return self = [self initWithBasePath:[NSTemporaryDirectory() stringByAppendingPathComponent:[[self class] uniqueKey]]];
-}
-
-- (id)initWithBasePath:(NSString *)path
-{
-    self = [self init];
-    if (self)
-    {
-        self.basePath = path;
-        [self createBasePath];
-    }
-    return self;
-}
-
 - (id)init
 {
     self = [super init];
@@ -75,11 +59,29 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
     return self;
 }
 
+- (id)initWithBasePath:(NSString *)path
+{
+    self = [self init];
+    if (self)
+    {
+        self.basePath = path;
+        [self createBasePath];
+    }
+    return self;
+}
+
+- (id)initWithUniqueTmpBasePath
+{
+    return self = [self initWithBasePath:[NSTemporaryDirectory() stringByAppendingPathComponent:[[self class] uniqueKey]]];
+}
+
 - (void)createBasePath
 {
     //TODO: Add error logging
 	[_fm createDirectoryAtPath:self.basePath withIntermediateDirectories:YES attributes:nil error:NULL];
 }
+
+#pragma mark - Resolving Content Type From File name
 
 - (NSString *)contentTypeForFileName:(NSString *)path
 {
@@ -108,6 +110,8 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
     BOOL isBlockType = [[self contentTypeForFileName:filePath] isEqualToString:kKHContentBlock];
     return isBlockType;
 }
+
+#pragma mark - Write file
 
 // Write content object to disk
 - (void)makeContentFile:(NSString *)filePath withArrayInfo:(NSArray *)info
