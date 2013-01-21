@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Kim Hunter. All rights reserved.
 //
 
-#import "KHJpegContent.h"
+#import "KHJPGContent.h"
 
-@implementation KHJpegContent
+@implementation KHJPGContent
 
 - (BOOL)writeToFile:(NSString *)fileName
 {

@@ -11,8 +11,8 @@
 
 NSString *const kKHContentTypePDF = @"kKHContentTypePDF";
 NSString *const kKHContentTypeText = @"kKHContentTypeText";
-NSString *const kKHContentTypeJpeg = @"kKHContentTypeJpeg";
-NSString *const kKHContentTypePNG = @"kKHContentTypeJpeg";
+NSString *const kKHContentTypeJPG = @"kKHContentTypeJPG";
+NSString *const kKHContentTypePNG = @"kKHContentTypePNG";
 NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
 
 @interface KHContentBuilder ()
@@ -55,7 +55,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
         [self addContentHandlerForExtensions:nil withClass:[KHDirContent class] withTypeKey:kKHContentTypeDir];
         [self addContentHandlerForExtensions:@[@"pdf"] withClass:[KHPDFContent class] withTypeKey:kKHContentTypePDF];
         [self addContentHandlerForExtensions:@[@"png"] withClass:[KHPNGContent class] withTypeKey:kKHContentTypePNG];
-        [self addContentHandlerForExtensions:@[@"jpg",@"jpeg"] withClass:[KHJpegContent class] withTypeKey:kKHContentTypeJpeg];
+        [self addContentHandlerForExtensions:@[@"jpg",@"jpeg"] withClass:[KHJPGContent class] withTypeKey:kKHContentTypeJPG];
         
         [self addContentHandlerForExtensions:@[@"txt", @"html", @"htm", @"css", @"url",]
                                    withClass:[KHTextContent class]

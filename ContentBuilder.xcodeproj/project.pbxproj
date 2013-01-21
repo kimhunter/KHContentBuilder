@@ -27,8 +27,8 @@
 		3BBAC1F916AD5B88009EE295 /* KHDirContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1E716AD5B88009EE295 /* KHDirContent.m */; };
 		3BBAC1FA16AD5B88009EE295 /* KHImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1E916AD5B88009EE295 /* KHImageContent.m */; };
 		3BBAC1FB16AD5B88009EE295 /* KHImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1E916AD5B88009EE295 /* KHImageContent.m */; };
-		3BBAC1FC16AD5B88009EE295 /* KHJpegContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1EB16AD5B88009EE295 /* KHJpegContent.m */; };
-		3BBAC1FD16AD5B88009EE295 /* KHJpegContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1EB16AD5B88009EE295 /* KHJpegContent.m */; };
+		3BBAC1FC16AD5B88009EE295 /* KHJPGContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1EB16AD5B88009EE295 /* KHJPGContent.m */; };
+		3BBAC1FD16AD5B88009EE295 /* KHJPGContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1EB16AD5B88009EE295 /* KHJPGContent.m */; };
 		3BBAC1FE16AD5B88009EE295 /* KHPDFContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1ED16AD5B88009EE295 /* KHPDFContent.m */; };
 		3BBAC1FF16AD5B88009EE295 /* KHPDFContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1ED16AD5B88009EE295 /* KHPDFContent.m */; };
 		3BBAC20016AD5B88009EE295 /* KHPDFHotspot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAC1EF16AD5B88009EE295 /* KHPDFHotspot.m */; };
@@ -80,8 +80,8 @@
 		3BBAC1E716AD5B88009EE295 /* KHDirContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHDirContent.m; sourceTree = "<group>"; };
 		3BBAC1E816AD5B88009EE295 /* KHImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHImageContent.h; sourceTree = "<group>"; };
 		3BBAC1E916AD5B88009EE295 /* KHImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHImageContent.m; sourceTree = "<group>"; };
-		3BBAC1EA16AD5B88009EE295 /* KHJpegContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHJpegContent.h; sourceTree = "<group>"; };
-		3BBAC1EB16AD5B88009EE295 /* KHJpegContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHJpegContent.m; sourceTree = "<group>"; };
+		3BBAC1EA16AD5B88009EE295 /* KHJPGContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHJPGContent.h; sourceTree = "<group>"; };
+		3BBAC1EB16AD5B88009EE295 /* KHJPGContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHJPGContent.m; sourceTree = "<group>"; };
 		3BBAC1EC16AD5B88009EE295 /* KHPDFContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFContent.h; sourceTree = "<group>"; };
 		3BBAC1ED16AD5B88009EE295 /* KHPDFContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPDFContent.m; sourceTree = "<group>"; };
 		3BBAC1EE16AD5B88009EE295 /* KHPDFHotspot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPDFHotspot.h; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 				3BBAC1E716AD5B88009EE295 /* KHDirContent.m */,
 				3BBAC1E816AD5B88009EE295 /* KHImageContent.h */,
 				3BBAC1E916AD5B88009EE295 /* KHImageContent.m */,
-				3BBAC1EA16AD5B88009EE295 /* KHJpegContent.h */,
-				3BBAC1EB16AD5B88009EE295 /* KHJpegContent.m */,
+				3BBAC1EA16AD5B88009EE295 /* KHJPGContent.h */,
+				3BBAC1EB16AD5B88009EE295 /* KHJPGContent.m */,
 				3BBAC1EC16AD5B88009EE295 /* KHPDFContent.h */,
 				3BBAC1ED16AD5B88009EE295 /* KHPDFContent.m */,
 				3BBAC1EE16AD5B88009EE295 /* KHPDFHotspot.h */,
@@ -338,7 +338,7 @@
 				3BBAC1F616AD5B88009EE295 /* KHContentBuilder.m in Sources */,
 				3BBAC1F816AD5B88009EE295 /* KHDirContent.m in Sources */,
 				3BBAC1FA16AD5B88009EE295 /* KHImageContent.m in Sources */,
-				3BBAC1FC16AD5B88009EE295 /* KHJpegContent.m in Sources */,
+				3BBAC1FC16AD5B88009EE295 /* KHJPGContent.m in Sources */,
 				3BBAC1FE16AD5B88009EE295 /* KHPDFContent.m in Sources */,
 				3BBAC20016AD5B88009EE295 /* KHPDFHotspot.m in Sources */,
 				3BBAC20216AD5B88009EE295 /* KHPDFMaker.m in Sources */,
@@ -355,7 +355,7 @@
 				3BBAC1F716AD5B88009EE295 /* KHContentBuilder.m in Sources */,
 				3BBAC1F916AD5B88009EE295 /* KHDirContent.m in Sources */,
 				3BBAC1FB16AD5B88009EE295 /* KHImageContent.m in Sources */,
-				3BBAC1FD16AD5B88009EE295 /* KHJpegContent.m in Sources */,
+				3BBAC1FD16AD5B88009EE295 /* KHJPGContent.m in Sources */,
 				3BBAC1FF16AD5B88009EE295 /* KHPDFContent.m in Sources */,
 				3BBAC20116AD5B88009EE295 /* KHPDFHotspot.m in Sources */,
 				3BBAC20316AD5B88009EE295 /* KHPDFMaker.m in Sources */,

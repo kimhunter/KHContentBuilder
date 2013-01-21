@@ -13,11 +13,11 @@
 #import "KHTextContent.h"
 #import "KHPDFContent.h"
 #import "KHPNGContent.h"
-#import "KHJpegContent.h"
+#import "KHJPGContent.h"
 
 extern NSString *const kKHContentTypePDF;
 extern NSString *const kKHContentTypeText;
-extern NSString *const kKHContentTypeJpeg;
+extern NSString *const kKHContentTypeJPG;
 extern NSString *const kKHContentTypePNG;
 extern NSString *const kKHContentTypeDir;
 

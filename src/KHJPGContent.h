@@ -10,6 +10,6 @@
 #import "KHContent.h"
 #import "KHImageContent.h"
 
-@interface KHJpegContent : KHImageContent<KHContent>
+@interface KHJPGContent : KHImageContent<KHContent>
 
 @end

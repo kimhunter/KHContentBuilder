@@ -45,9 +45,9 @@
 
 - (BOOL)isDir:(NSString *)dirPath
 {
-    BOOL isDir = NO;
-    STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:dirPath isDirectory:&isDir], @"Dir should exist");
-    return isDir;
+	BOOL isDir = NO;
+	BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:dirPath isDirectory:&isDir];
+	return (exists && isDir) ? YES : NO;
 }
 
 - (void)testBuildSimple
