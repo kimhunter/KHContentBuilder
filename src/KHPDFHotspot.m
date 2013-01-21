@@ -55,7 +55,14 @@
             CGContextSetFillColorWithColor(c, [self.fillWithColor CGColor]);
             CGContextFillRect(c, self.rect);
         }
-        CGContextRestoreGState(c);    }
+        CGContextRestoreGState(c);
+    }
 }
 
 @end
+
+
+KHPDFHotspot *KHPDFHotspotMake(NSString *string, CGRect rect, NSInteger page)
+{
+    return [KHPDFHotspot hotspotWithString:string withRect:rect onPage:page];
+}
