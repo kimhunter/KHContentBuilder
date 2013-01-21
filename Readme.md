@@ -17,14 +17,14 @@ It's extendable, so you can create your own Content writers.
 Just implement 2 methods and you can have a custom content writer
 
 
-		@protocol KHContent <NSObject>
+    @protocol KHContent <NSObject>
     @required
-			+ (id)contentWithArray:(NSArray *)array;
-			- (BOOL)writeToFile:(NSString *)fileName;
+    + (id)contentWithArray:(NSArray *)array;
+    - (BOOL)writeToFile:(NSString *)fileName;
     
     @optional
-			- (NSString *)contentType;
-			- (void)setPdfMaker:(KHPDFMaker *)pdfMaker;
+		- (NSString *)contentType;
+		- (void)setPdfMaker:(KHPDFMaker *)pdfMaker;
 		@end
 	
 
