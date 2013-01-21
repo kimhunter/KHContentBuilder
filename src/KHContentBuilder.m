@@ -120,7 +120,7 @@ NSString *const kKHContentTypeDir = @"kKHContentTypeDir";
         [content setPdfMaker:self.pdfMaker];
     }
     
-    NSString *fullPath = [self.basePath stringByAppendingPathComponent:filePath];
+    NSString *fullPath = [self fullPathForRelPath:filePath];
     [_fm createDirectoryAtPath:[fullPath stringByDeletingLastPathComponent]
    withIntermediateDirectories:YES
                     attributes:nil
