@@ -184,6 +184,7 @@ NSString *const kKHContentBlock   = @"kKHContentBlock";
 }
 
 #pragma mark - Builtin Block Content Types
+
 - (void)addCustomBlockTypes
 {
     [self addContentHandlerForExtensions:@[@"json"] withBlock:^BOOL(NSString *fileName, NSArray *info) {

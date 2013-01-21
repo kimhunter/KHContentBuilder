@@ -21,6 +21,8 @@ extern NSString *const kKHContentTypeJPG;
 extern NSString *const kKHContentTypePNG;
 extern NSString *const kKHContentTypeDir;
 
+//TODO: Add appledoc style comments to this class
+
 @interface KHContentBuilder : NSObject
 
 @property (retain) NSFileManager *fm;
@@ -34,7 +36,7 @@ extern NSString *const kKHContentTypeDir;
 - (void)addContentHandlerForExtensions:(NSArray *)extensions withBlock:(BOOL(^)(NSString *fileName, NSArray *info))block;
 /** build a directory structure with the given dictionary
     @param fileDict dictionary of key(NSString)/values(NSArray)
-                    The key should is a path relative to the basePath
+                    The key is a path relative to the basePath
                     A key with a suffix of '/' denotes an empty directory
                     Use the correct array using KH()ContentInfoMake methods to return the correct array
                         these are simplified to take primative types
